@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TapsellSDK;
-
+using DG.Tweening;
 
 
 public class GameController : MonoBehaviour
@@ -55,6 +55,9 @@ public class GameController : MonoBehaviour
 
     public static int TouchHelper;
     public static int pauseHelper; // for disabaling pause during win animation
+
+    private int SwitchStatus = 1;
+    public GameObject SwitchButton;
     //public ParticleSystem fireWorks;
 
     public void request()
@@ -118,6 +121,17 @@ public class GameController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // خواندن مقدار ذخیره‌شده (اگر وجود نداشته باشد، مقدار پیش‌فرض 1 است)
+        int soundSetting = PlayerPrefs.GetInt("sound", 1);
+        // اعمال وضعیت ذخیره‌شده
+        AudioListener.volume = soundSetting == 1 ? 1 : 0;
+        // تنظیم موقعیت دکمه سوییچ بر اساس مقدار ذخیره‌شده
+        SwitchButton.transform.localPosition = new Vector3(soundSetting == 1 ? 90 : -90, SwitchButton.transform.localPosition.y, 0);
+
+        // مقدار SwitchStatus را هم به‌روز کنیم
+        SwitchStatus = soundSetting == 1 ? 1 : -1;
+
+
         initialAdHelper = 1;
         pauseHelper = 0;
         adHelper = 0;
@@ -472,6 +486,24 @@ public class GameController : MonoBehaviour
 
         }
     }
+    public void SwitchSoundButtonClick()
+    {
+        //SwitchButton.transform.localPosition = new Vector3(-SwitchButton.transform.localPosition.x,SwitchButton.transform.localPosition.y,0);
+        SwitchButton.transform.DOLocalMoveX(-SwitchButton.transform.localPosition.x, 0.5f);
+        SwitchStatus = (int)Mathf.Sign(-SwitchButton.transform.localPosition.x);
+        Debug.Log(" switch status = " + SwitchStatus);
+        if (SwitchStatus == 1)
+        {
+            AudioListener.volume = 1;
+            PlayerPrefs.SetInt("sound", 1);
+        }
+        else if (SwitchStatus == -1)
+        {
+            AudioListener.volume = 0;
+            PlayerPrefs.SetInt("sound", 0);
+        }
+        PlayerPrefs.Save();
+    }
 
     IEnumerator reqad()
     {
@@ -510,8 +542,8 @@ public class GameController : MonoBehaviour
             pause.interactable = false;
         }
 
-        Debug.Log("level selected update" + selectedLevelNumber);
-        Debug.Log("level number update" + LevelNumber);
+        //Debug.Log("level selected update" + selectedLevelNumber);
+        //Debug.Log("level number update" + LevelNumber);
         switch (selectedLevelNumber)
         {
             

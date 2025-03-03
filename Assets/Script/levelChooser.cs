@@ -9,6 +9,11 @@ using TapsellSDK;
 
 public class levelChooser : MonoBehaviour
 {
+    public GameObject loadingScreen; // گیم آبجکت صفحه لودینگ
+    public Image loadingBarFill; // ایمیج مربوط به پر شدن نوار لودینگ
+
+
+    
     private int LevelNumber;
 
     #region   //level button
@@ -1448,16 +1453,20 @@ public class levelChooser : MonoBehaviour
 
     public void level1Selected()
     {
+        //StartCoroutine(LoadingCanvasActive());
         PlayerPrefs.SetInt("levelSelected", 1);
-        SceneManager.LoadScene("SampleScene");
+        StartCoroutine(LoadSceneWithLoading("SampleScene"));
+        //SceneManager.LoadScene("SampleScene");
+        //StartCoroutine(LoadSceneAsync("SampleScene")); // شروع بارگذاری صحنه به‌صورت غیرهمزمان
 
     }    
     public void level2Selected()
     {
         PlayerPrefs.SetInt("levelSelected", 2);
-        SceneManager.LoadScene("SampleScene");
+        StartCoroutine(LoadSceneWithLoading("SampleScene"));
+        //SceneManager.LoadScene("SampleScene");
 
-    }    
+    }
     public void level3Selected()
     {
         PlayerPrefs.SetInt("levelSelected", 3);
@@ -1539,7 +1548,8 @@ public class levelChooser : MonoBehaviour
     public void level16Selected()
     {
         PlayerPrefs.SetInt("levelSelected", 16);
-        SceneManager.LoadScene("4tike");
+        //SceneManager.LoadScene("4tike");
+        StartCoroutine(LoadSceneWithLoading("4tike"));
 
     }
     public void level17Selected()
@@ -1743,6 +1753,46 @@ public class levelChooser : MonoBehaviour
         noStar.gameObject.SetActive(false);
     }
 
+    IEnumerator LoadSceneAsync(string sceneName)
+    {
+        AsyncOperation operation = SceneManager.LoadSceneAsync(sceneName);
+        operation.allowSceneActivation = false; // جلوگیری از اجرای صحنه تا زمانی که کاملاً لود شود
 
+        while (!operation.isDone)
+        {
+            float progressValue = Mathf.Clamp01(operation.progress / 0.9f);
+            loadingBarFill.fillAmount = progressValue; // مقدار پر شدن نوار را تنظیم کن
+
+            // وقتی لودینگ کامل شد، صحنه را فعال کن
+            if (operation.progress >= 0.9f)
+            {
+                yield return new WaitForSeconds(0.5f); // تاخیر کوچک برای طبیعی‌تر شدن لودینگ
+                operation.allowSceneActivation = true;
+            }
+
+            yield return null;
+        }
+    }
+    IEnumerator LoadSceneWithLoading(string sceneName)
+    {
+        loadingScreen.SetActive(true); // نمایش صفحه لودینگ
+
+        yield return new WaitForSeconds(3f); // صبر کردن به مدت ۳ ثانیه
+
+        AsyncOperation operation = SceneManager.LoadSceneAsync(sceneName); // بارگذاری صحنه به‌صورت غیرهمزمان
+
+        while (!operation.isDone)
+        {
+            yield return null; // صبر کردن تا زمانی که صحنه به‌طور کامل لود شود
+        }
+    }
+    IEnumerator LoadingCanvasActive()
+    {
+        loadingScreen.SetActive(true); // فعال کردن گیم‌ آبجکت
+
+        yield return new WaitForSeconds(3f); // منتظر ماندن به مدت ۳ ثانیه
+
+        loadingScreen.SetActive(false); // غیرفعال کردن گیم‌ آبجکت
+    }
 }
 

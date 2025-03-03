@@ -9,6 +9,7 @@ using CafeBazaar.Billing;
 public class Menu : MonoBehaviour
 {
     public GameObject mainMenu;
+    public GameObject LevelPages;
     public GameObject levelSelected3tike;
     public GameObject levelSelected4tike;
     public GameObject levelSelectedDino;
@@ -23,6 +24,7 @@ public class Menu : MonoBehaviour
     public levelChooser lv3tike;
     public levelChooser lv4tike;
     public levelChooser lvDino;
+    //public GameObject 
 
     //string iapAds = "ads";
     //string tapsellKey = "rahqjisrhsmpfapomoqsrfjefaoqcparseaqqscfndfgskootkcdjmsjbicibbsaaapacs";
@@ -54,6 +56,7 @@ public class Menu : MonoBehaviour
         {
             AudioListener.volume = 1;
             sound.GetComponent<Image>().sprite = soundOn;
+            Debug.Log("seda one");
 
         }
         if (PlayerPrefs.GetInt("sound", 1) == 0) // 1 mean on, 0 mean off
@@ -117,7 +120,8 @@ public class Menu : MonoBehaviour
         Debug.Log("next  shod");
 
         mainMenu.SetActive(false);
-        levelSelected3tike.SetActive(true);
+        LevelPages.SetActive(true);
+        //levelSelected3tike.SetActive(true);
         lv3tike.Start();
 
     }
@@ -125,9 +129,10 @@ public class Menu : MonoBehaviour
     {
 
         mainMenu.SetActive(true);
-        levelSelected3tike.SetActive(false);
-        levelSelected4tike.SetActive(false);
-        levelSelectedDino.SetActive(false);
+        LevelPages.SetActive(false);
+        //levelSelected3tike.SetActive(false);
+        //levelSelected4tike.SetActive(false);
+        //levelSelectedDino.SetActive(false);
 
 
 
@@ -193,7 +198,7 @@ public class Menu : MonoBehaviour
 
     public void Update()
     {
-        Debug.Log(PlayerPrefs.GetInt("sound", 1));
+        //Debug.Log(PlayerPrefs.GetInt("sound", 1));
     }
     public void soundOnOff()
     {
