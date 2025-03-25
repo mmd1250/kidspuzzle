@@ -8,6 +8,8 @@ using CafeBazaar.Billing;
 
 public class Menu : MonoBehaviour
 {
+    public AudioSource audioSource;
+    public GameObject Star_Particle;
     public GameObject mainMenu;
     public GameObject LevelPages;
     public GameObject levelSelected3tike;
@@ -118,16 +120,17 @@ public class Menu : MonoBehaviour
     {
         level = 1;
         Debug.Log("next  shod");
-
+        Star_Particle.SetActive(false);
         mainMenu.SetActive(false);
         LevelPages.SetActive(true);
         //levelSelected3tike.SetActive(true);
         lv3tike.Start();
+        audioSource.Play();
 
     }
     public void MainMenu()
     {
-
+        Star_Particle.SetActive(true);
         mainMenu.SetActive(true);
         LevelPages.SetActive(false);
         //levelSelected3tike.SetActive(false);
