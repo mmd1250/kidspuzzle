@@ -6,7 +6,7 @@ public class ButtonAnimation : MonoBehaviour
 {
     Button Btn;
     Vector3 upScale = new Vector3(2f,2f,1);
-    Vector3 scale = new Vector3(1.5f,1.5f,1);
+    Vector3 scale = new Vector3(2.2f,2.2f,1);
 
     private void Awake()
     {

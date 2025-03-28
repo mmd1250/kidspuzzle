@@ -7,6 +7,7 @@ public class SoundSwipeMenu : MonoBehaviour
 {
     //1 enabled and -1 disabled
     private int SwitchStatus = 1;
+    public int MoveX;
     public GameObject switchButton;
     // Start is called before the first frame update
     void Start()
@@ -16,7 +17,7 @@ public class SoundSwipeMenu : MonoBehaviour
         // ????? ????? ?????????
         AudioListener.volume = soundSetting == 1 ? 1 : 0;
         // ????? ?????? ???? ????? ?? ???? ????? ?????????
-        switchButton.transform.localPosition = new Vector3(soundSetting == 1 ? 212 : -212, switchButton.transform.localPosition.y, 0);
+        switchButton.transform.localPosition = new Vector3(soundSetting == 1 ? MoveX : -MoveX, switchButton.transform.localPosition.y, 0);
 
         // ????? SwitchStatus ?? ?? ?????? ????
         SwitchStatus = soundSetting == 1 ? 1 : -1;
