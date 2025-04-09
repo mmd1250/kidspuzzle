@@ -37,9 +37,9 @@ public class FallingParts : MonoBehaviour
     IEnumerator FallTimer()
     {
         yield return new WaitForSeconds(2);
-        LeanTween.move(part1, MainPart1.transform.position, 2f).setEase(LeanTweenType.easeInOutQuad);
-        LeanTween.move(part2, MainPart2.transform.position, 2f).setEase(LeanTweenType.easeInOutQuad);
-        LeanTween.move(part3, MainPart3.transform.position, 2f).setEase(LeanTweenType.easeInOutQuad)
+        LeanTween.move(part1, MainPart1.transform.position, 1.2f).setEase(LeanTweenType.easeInOutQuad);
+        LeanTween.move(part2, MainPart2.transform.position, 1.2f).setEase(LeanTweenType.easeInOutQuad);
+        LeanTween.move(part3, MainPart3.transform.position, 1.2f).setEase(LeanTweenType.easeInOutQuad)
             .setOnComplete(() => // ????? ????? ???? ???? ?? ??? ????? ???? ??
             {
             part1.SetActive(false);
