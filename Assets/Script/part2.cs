@@ -93,7 +93,7 @@ public class part2 : MonoBehaviour
                         winLevel.lockSoundPlay();
                         winLevel4part.lockSoundPlay();
                         winLevel5part.lockSoundPlay();
-
+                        shadowPlace.GetComponent<SpriteRenderer>().enabled = true;
 
                     }
                     else
