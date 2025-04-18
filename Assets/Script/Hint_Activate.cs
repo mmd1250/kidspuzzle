@@ -59,13 +59,14 @@ public class Hint_Activate : MonoBehaviour
             yield break;
         }
         int rand = availableHints[Random.Range(0, availableHints.Count)];
+        Vector3 offset = new Vector3(0.4f, -0.2f, 0); // ???? ? ?????
         for (int i = 0; i < 3; i++)
         {
             
             // ????? ?????? ???? ??????
-            Pointer.transform.position = Starts[rand].transform.position;
+            Pointer.transform.position = Starts[rand].transform.position + offset;
 
-            LeanTween.move(Pointer, Targets[rand].transform.position, 2f).setEase(LeanTweenType.easeInOutQuad);
+            LeanTween.move(Pointer, Targets[rand].transform.position + offset, 2f).setEase(LeanTweenType.easeInOutQuad);
 
             // ??? ?? ?? ???? ???? ??
             yield return new WaitForSeconds(2f);

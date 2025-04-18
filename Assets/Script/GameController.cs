@@ -21,6 +21,10 @@ public class GameController : MonoBehaviour
     public Sprite soundOff;
     public Button sound;
 
+    public AudioSource PauseAudioSource;
+    public AudioSource ResumeAudioSource;
+
+
 
     public GameObject Level1;
     public GameObject Level2;
@@ -1178,19 +1182,20 @@ public class GameController : MonoBehaviour
         part1.locked1 = true;
         part2.locked2 = true;
         part3.locked3 = true;
-
+        PauseAudioSource.Play();
 
     }
 
     public void resumeSelected()
     {
+        ResumeAudioSource.Play();
         pause.interactable = true;
         pausePanel.gameObject.SetActive(false);
         part1.locked1 = false;
         part2.locked2 = false;
         part3.locked3 = false;
         winLevel.pauseHelper = 0;
-
+        
     }
 
     public void backToMenu()
