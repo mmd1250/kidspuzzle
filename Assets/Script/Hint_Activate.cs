@@ -18,7 +18,7 @@ public class Hint_Activate : MonoBehaviour
 
     void Start()
     {
-        
+        PointerStartPosition = Pointer.transform.position;
         //StartCoroutine(WaitTime());
     }
 

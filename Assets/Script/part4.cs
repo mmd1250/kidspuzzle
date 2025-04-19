@@ -95,6 +95,7 @@ public class part4 : MonoBehaviour
 
 
                         locked4 = true;
+                        shadowPlace.GetComponent<SpriteRenderer>().enabled = true;
                     }
                     else
                     {
