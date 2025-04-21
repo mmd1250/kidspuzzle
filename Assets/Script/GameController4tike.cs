@@ -39,6 +39,7 @@ public class GameController4tike : MonoBehaviour
 
     public Text starNumber;
 
+    public Animator Panel_Animator;
     public static AudioClip lockPart;
     public static int adHelper;
     string zoneId = "606ae81114e5b90001c817c0";
@@ -512,7 +513,7 @@ public class GameController4tike : MonoBehaviour
         {
             pause.interactable = false;
         }
-        Debug.Log("level" + selectedLevelNumber);
+        //Debug.Log("level" + selectedLevelNumber);
 
         switch (selectedLevelNumber)
         {
@@ -1203,6 +1204,7 @@ public class GameController4tike : MonoBehaviour
     {
         pause.interactable = false;
         pausePanel.gameObject.SetActive(true);
+        Panel_Animator.SetTrigger("PanelShow");
         winLevel4part.pauseHelper = 1;
         part1.locked1 = true;
         part2.locked2 = true;
@@ -1215,7 +1217,8 @@ public class GameController4tike : MonoBehaviour
     public void resumeSelected()
     {
         pause.interactable = true;
-        pausePanel.gameObject.SetActive(false);
+        Panel_Animator.SetTrigger("PanelHide");
+        //pausePanel.gameObject.SetActive(false);
         part1.locked1 = false;
         part2.locked2 = false;
         part3.locked3 = false;

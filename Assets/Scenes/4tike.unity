@@ -7157,6 +7157,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Pointer: {fileID: 1133078370}
+  Counter: 0
   Starts:
   - {fileID: 2048382951}
   - {fileID: 782155385}
@@ -8373,6 +8374,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Pointer: {fileID: 1133078370}
+  Counter: 0
   Starts:
   - {fileID: 1904680447}
   - {fileID: 505502020}
@@ -10202,6 +10204,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Pointer: {fileID: 1133078370}
+  Counter: 0
   Starts:
   - {fileID: 1918031299}
   - {fileID: 933147502}
@@ -10554,6 +10557,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Pointer: {fileID: 1133078370}
+  Counter: 0
   Starts:
   - {fileID: 2080218383}
   - {fileID: 238218383}
@@ -14296,7 +14300,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!82 &487542275
 AudioSource:
   m_ObjectHideFlags: 0
@@ -14475,6 +14479,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Pointer: {fileID: 1133078370}
+  Counter: 0
   Starts:
   - {fileID: 2041290076}
   - {fileID: 793819480}
@@ -18828,6 +18833,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Pointer: {fileID: 1133078370}
+  Counter: 0
   Starts:
   - {fileID: 1120763093}
   - {fileID: 1215358565}
@@ -19410,9 +19416,10 @@ GameObject:
   - component: {fileID: 670306928}
   - component: {fileID: 670306927}
   - component: {fileID: 670306926}
+  - component: {fileID: 670306929}
   m_Layer: 5
   m_Name: Panel
-  m_TagString: Untagged
+  m_TagString: Panel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19500,6 +19507,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 670306924}
   m_CullTransparentMesh: 0
+--- !u!114 &670306929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 670306924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e57178941b92d4a42bb90fdc960b9eea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &673364603
 GameObject:
   m_ObjectHideFlags: 0
@@ -20271,6 +20290,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Pointer: {fileID: 1133078370}
+  Counter: 0
   Starts:
   - {fileID: 1432026455}
   - {fileID: 192995402}
@@ -20843,6 +20863,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Pointer: {fileID: 1133078370}
+  Counter: 0
   Starts:
   - {fileID: 1928988084}
   - {fileID: 1441042673}
@@ -23729,6 +23750,7 @@ MonoBehaviour:
   soundOff: {fileID: 21300000, guid: 86976b0e2eff38b479a530b5bdfe8e49, type: 3}
   sound: {fileID: 219315919}
   starNumber: {fileID: 1401417561}
+  Panel_Animator: {fileID: 670306926}
   pause: {fileID: 1435145918}
   pausePanel: {fileID: 670306924}
 --- !u!4 &806936600
@@ -26419,6 +26441,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Pointer: {fileID: 1133078370}
+  Counter: 0
   Starts:
   - {fileID: 610198013}
   - {fileID: 101139798}
@@ -28187,6 +28210,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Pointer: {fileID: 1133078370}
+  Counter: 0
   Starts:
   - {fileID: 323532294}
   - {fileID: 682846564}
@@ -31213,15 +31237,15 @@ GameObject:
   - component: {fileID: 1096751239}
   - component: {fileID: 1096751240}
   - component: {fileID: 1096751244}
-  - component: {fileID: 1096751243}
   - component: {fileID: 1096751242}
+  - component: {fileID: 1096751245}
   m_Layer: 0
   m_Name: LVL14
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!82 &1096751239
 AudioSource:
   m_ObjectHideFlags: 0
@@ -31387,29 +31411,6 @@ MonoBehaviour:
   part3: {fileID: 378036952}
   part4: {fileID: 759519578}
   part5: {fileID: 0}
---- !u!114 &1096751243
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1096751238}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b346cfadfd926274dac9e79b54827dd8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Pointer: {fileID: 1133078370}
-  Starts:
-  - {fileID: 1870736990}
-  - {fileID: 1664074302}
-  - {fileID: 378036952}
-  - {fileID: 759519578}
-  Targets:
-  - {fileID: 2033960093}
-  - {fileID: 2092204641}
-  - {fileID: 1417914781}
-  - {fileID: 1398929363}
 --- !u!114 &1096751244
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31434,6 +31435,30 @@ MonoBehaviour:
   MainPart2: {fileID: 1664074302}
   MainPart3: {fileID: 378036952}
   MainPart4: {fileID: 759519578}
+--- !u!114 &1096751245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1096751238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b346cfadfd926274dac9e79b54827dd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Pointer: {fileID: 1133078370}
+  Counter: 0
+  Starts:
+  - {fileID: 1870736990}
+  - {fileID: 1664074302}
+  - {fileID: 378036952}
+  - {fileID: 759519578}
+  Targets:
+  - {fileID: 2033960093}
+  - {fileID: 2092204641}
+  - {fileID: 1417914781}
+  - {fileID: 1398929363}
 --- !u!4 &1100532545 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4141308871763668, guid: 1b76f6409269d5b43a087e5d24206cba,
@@ -37231,6 +37256,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Pointer: {fileID: 1133078370}
+  Counter: 0
   Starts:
   - {fileID: 547832900}
   - {fileID: 2035176066}
@@ -52896,6 +52922,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Pointer: {fileID: 1133078370}
+  Counter: 0
   Starts:
   - {fileID: 498758064}
   - {fileID: 72156333}
@@ -53129,6 +53156,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Pointer: {fileID: 1133078370}
+  Counter: 0
   Starts:
   - {fileID: 665402722}
   - {fileID: 1711947043}
@@ -56197,6 +56225,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Pointer: {fileID: 1133078370}
+  Counter: 0
   Starts:
   - {fileID: 1658856870}
   - {fileID: 748821640}

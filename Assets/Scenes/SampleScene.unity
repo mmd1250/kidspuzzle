@@ -4507,6 +4507,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Pointer: {fileID: 1031877219}
+  Counter: 0
   Starts:
   - {fileID: 2048382951}
   - {fileID: 782155385}
@@ -5674,6 +5675,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Pointer: {fileID: 1031877219}
+  Counter: 0
   Starts:
   - {fileID: 1904680447}
   - {fileID: 505502020}
@@ -6941,6 +6943,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Pointer: {fileID: 1031877219}
+  Counter: 0
   Starts:
   - {fileID: 1918031299}
   - {fileID: 933147502}
@@ -7241,6 +7244,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Pointer: {fileID: 1031877219}
+  Counter: 0
   Starts:
   - {fileID: 2080218383}
   - {fileID: 238218383}
@@ -10572,6 +10576,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Pointer: {fileID: 1031877219}
+  Counter: 0
   Starts:
   - {fileID: 2041290076}
   - {fileID: 793819480}
@@ -14569,6 +14574,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Pointer: {fileID: 1031877219}
+  Counter: 0
   Starts:
   - {fileID: 1120763093}
   - {fileID: 1215358565}
@@ -16368,6 +16374,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Pointer: {fileID: 1031877219}
+  Counter: 0
   Starts:
   - {fileID: 1432026455}
   - {fileID: 192995402}
@@ -17230,6 +17237,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Pointer: {fileID: 1031877219}
+  Counter: 0
   Starts:
   - {fileID: 1928988084}
   - {fileID: 1441042673}
@@ -21813,6 +21821,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Pointer: {fileID: 1031877219}
+  Counter: 0
   Starts:
   - {fileID: 610198013}
   - {fileID: 101139798}
@@ -22818,6 +22827,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Pointer: {fileID: 1031877219}
+  Counter: 0
   Starts:
   - {fileID: 323532294}
   - {fileID: 682846564}
@@ -25007,6 +25017,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Pointer: {fileID: 1031877219}
+  Counter: 0
   Starts:
   - {fileID: 1870736990}
   - {fileID: 1664074302}
@@ -28453,6 +28464,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Pointer: {fileID: 1031877219}
+  Counter: 0
   Starts:
   - {fileID: 547832900}
   - {fileID: 2035176066}
@@ -33708,7 +33720,7 @@ GameObject:
   - component: {fileID: 1549575723}
   m_Layer: 5
   m_Name: Panel
-  m_TagString: Untagged
+  m_TagString: Panel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -42030,6 +42042,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Pointer: {fileID: 1031877219}
+  Counter: 0
   Starts:
   - {fileID: 498758064}
   - {fileID: 72156333}
@@ -42313,6 +42326,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Pointer: {fileID: 0}
+  Counter: 0
   Starts:
   - {fileID: 665402722}
   - {fileID: 1711947043}
@@ -44929,6 +44943,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Pointer: {fileID: 1031877219}
+  Counter: 0
   Starts:
   - {fileID: 1658856870}
   - {fileID: 748821640}

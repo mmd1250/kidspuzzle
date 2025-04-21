@@ -20,6 +20,9 @@ public class GameController5tike : MonoBehaviour
     public GameObject Level4;
     public GameObject Level5;
 
+
+    public Animator Panel_Animator;
+
     public Text starNumber;
     int tapsellHelper;  // for avalabing ad
 
@@ -119,13 +122,13 @@ public class GameController5tike : MonoBehaviour
         if (PlayerPrefs.GetInt("sound", 1) == 1) // 1 mean on, 0 mean off
         {
             AudioListener.volume = 1;
-            sound.GetComponent<Image>().sprite = soundOn;
+            //sound.GetComponent<Image>().sprite = soundOn;
 
         }
         if (PlayerPrefs.GetInt("sound", 1) == 0) // 1 mean on, 0 mean off
         {
             AudioListener.volume = 0;
-            sound.GetComponent<Image>().sprite = soundOff;
+            //sound.GetComponent<Image>().sprite = soundOff;
 
 
         }
@@ -492,6 +495,7 @@ public class GameController5tike : MonoBehaviour
     {
         pause.interactable = false;
         pausePanel.gameObject.SetActive(true);
+        Panel_Animator.SetTrigger("PanelShow");
         winLevel5part.pauseHelper = 1;
         part1.locked1 = true;
         part2.locked2 = true;
@@ -505,7 +509,8 @@ public class GameController5tike : MonoBehaviour
     public void resumeSelected()
     {
         pause.interactable = true;
-        pausePanel.gameObject.SetActive(false);
+        Panel_Animator.SetTrigger("PanelHide");
+        //pausePanel.gameObject.SetActive(false);
         part1.locked1 = false;
         part2.locked2 = false;
         part3.locked3 = false;
