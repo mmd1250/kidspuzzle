@@ -4531,10 +4531,12 @@ MonoBehaviour:
   Bubble_Particle2: {fileID: 1917142004}
   Bubble_Particle3: {fileID: 1436391617}
   Bubble_Particle4: {fileID: 0}
+  Bubble_Particle5: {fileID: 0}
   part1: {fileID: 2048382951}
   part2: {fileID: 782155385}
   part3: {fileID: 1558606286}
   part4: {fileID: 0}
+  part5: {fileID: 0}
 --- !u!4 &231390616 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 412550, guid: c574b8bf6409ae8478316b2134abf9d1,
@@ -5632,10 +5634,12 @@ MonoBehaviour:
   Bubble_Particle2: {fileID: 277376564}
   Bubble_Particle3: {fileID: 1897827081}
   Bubble_Particle4: {fileID: 0}
+  Bubble_Particle5: {fileID: 0}
   part1: {fileID: 1904680447}
   part2: {fileID: 505502020}
   part3: {fileID: 359326630}
   part4: {fileID: 0}
+  part5: {fileID: 0}
 --- !u!114 &269712811
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6918,10 +6922,12 @@ MonoBehaviour:
   Bubble_Particle2: {fileID: 1838857708}
   Bubble_Particle3: {fileID: 317215824}
   Bubble_Particle4: {fileID: 0}
+  Bubble_Particle5: {fileID: 0}
   part1: {fileID: 1918031299}
   part2: {fileID: 933147502}
   part3: {fileID: 1410713995}
   part4: {fileID: 0}
+  part5: {fileID: 0}
 --- !u!114 &336385628
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7259,10 +7265,12 @@ MonoBehaviour:
   Bubble_Particle2: {fileID: 1748679612}
   Bubble_Particle3: {fileID: 637069339}
   Bubble_Particle4: {fileID: 0}
+  Bubble_Particle5: {fileID: 0}
   part1: {fileID: 2080218383}
   part2: {fileID: 238218383}
   part3: {fileID: 2035279100}
   part4: {fileID: 0}
+  part5: {fileID: 0}
 --- !u!1 &359326630
 GameObject:
   m_ObjectHideFlags: 0
@@ -10545,10 +10553,12 @@ MonoBehaviour:
   Bubble_Particle2: {fileID: 280790030}
   Bubble_Particle3: {fileID: 1097043423}
   Bubble_Particle4: {fileID: 0}
+  Bubble_Particle5: {fileID: 0}
   part1: {fileID: 2041290076}
   part2: {fileID: 793819480}
   part3: {fileID: 776162144}
   part4: {fileID: 0}
+  part5: {fileID: 0}
 --- !u!114 &487542279
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14519,10 +14529,12 @@ MonoBehaviour:
   Bubble_Particle2: {fileID: 483073605}
   Bubble_Particle3: {fileID: 990461857}
   Bubble_Particle4: {fileID: 0}
+  Bubble_Particle5: {fileID: 0}
   part1: {fileID: 1120763093}
   part2: {fileID: 1215358565}
   part3: {fileID: 1756004383}
   part4: {fileID: 0}
+  part5: {fileID: 0}
 --- !u!114 &637760679
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16316,10 +16328,12 @@ MonoBehaviour:
   Bubble_Particle2: {fileID: 1964622204}
   Bubble_Particle3: {fileID: 1839284241}
   Bubble_Particle4: {fileID: 0}
+  Bubble_Particle5: {fileID: 0}
   part1: {fileID: 1432026455}
   part2: {fileID: 192995402}
   part3: {fileID: 377003607}
   part4: {fileID: 0}
+  part5: {fileID: 0}
 --- !u!114 &697565082
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17240,10 +17254,12 @@ MonoBehaviour:
   Bubble_Particle2: {fileID: 950365623}
   Bubble_Particle3: {fileID: 1417270100}
   Bubble_Particle4: {fileID: 0}
+  Bubble_Particle5: {fileID: 0}
   part1: {fileID: 1928988084}
   part2: {fileID: 1441042673}
   part3: {fileID: 1195559331}
   part4: {fileID: 0}
+  part5: {fileID: 0}
 --- !u!1 &739061053
 GameObject:
   m_ObjectHideFlags: 0
@@ -20343,6 +20359,7 @@ MonoBehaviour:
   sound: {fileID: 483564327}
   PauseAudioSource: {fileID: 1467225098}
   ResumeAudioSource: {fileID: 1350789474}
+  Panel_Animator: {fileID: 1549575722}
   Level1: {fileID: 336385622}
   Level2: {fileID: 697565077}
   Level3: {fileID: 1322821727}
@@ -21756,10 +21773,12 @@ MonoBehaviour:
   Bubble_Particle2: {fileID: 1586802015}
   Bubble_Particle3: {fileID: 460545592}
   Bubble_Particle4: {fileID: 0}
+  Bubble_Particle5: {fileID: 0}
   part1: {fileID: 610198013}
   part2: {fileID: 101139798}
   part3: {fileID: 791850364}
   part4: {fileID: 0}
+  part5: {fileID: 0}
 --- !u!114 &915909426
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22823,10 +22842,12 @@ MonoBehaviour:
   Bubble_Particle2: {fileID: 85482867}
   Bubble_Particle3: {fileID: 398327276}
   Bubble_Particle4: {fileID: 0}
+  Bubble_Particle5: {fileID: 0}
   part1: {fileID: 323532294}
   part2: {fileID: 682846564}
   part3: {fileID: 484607358}
   part4: {fileID: 0}
+  part5: {fileID: 0}
 --- !u!1 &963237853
 GameObject:
   m_ObjectHideFlags: 0
@@ -24946,10 +24967,12 @@ MonoBehaviour:
   Bubble_Particle2: {fileID: 1778070377}
   Bubble_Particle3: {fileID: 642771931}
   Bubble_Particle4: {fileID: 0}
+  Bubble_Particle5: {fileID: 0}
   part1: {fileID: 1870736990}
   part2: {fileID: 1664074302}
   part3: {fileID: 378036952}
   part4: {fileID: 0}
+  part5: {fileID: 0}
 --- !u!114 &1096751243
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28390,10 +28413,12 @@ MonoBehaviour:
   Bubble_Particle2: {fileID: 349365069}
   Bubble_Particle3: {fileID: 1213762298}
   Bubble_Particle4: {fileID: 0}
+  Bubble_Particle5: {fileID: 0}
   part1: {fileID: 547832900}
   part2: {fileID: 2035176066}
   part3: {fileID: 1464255591}
   part4: {fileID: 0}
+  part5: {fileID: 0}
 --- !u!114 &1322821732
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33680,13 +33705,14 @@ GameObject:
   - component: {fileID: 1549575721}
   - component: {fileID: 1549575720}
   - component: {fileID: 1549575722}
+  - component: {fileID: 1549575723}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1549575719
 RectTransform:
   m_ObjectHideFlags: 0
@@ -33697,7 +33723,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 512556042}
   - {fileID: 595075362}
@@ -33770,6 +33796,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1549575723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1549575718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e57178941b92d4a42bb90fdc960b9eea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1555633431
 GameObject:
   m_ObjectHideFlags: 0
@@ -41952,10 +41990,12 @@ MonoBehaviour:
   Bubble_Particle2: {fileID: 472880021}
   Bubble_Particle3: {fileID: 45338633}
   Bubble_Particle4: {fileID: 0}
+  Bubble_Particle5: {fileID: 0}
   part1: {fileID: 498758064}
   part2: {fileID: 72156333}
   part3: {fileID: 1428431358}
   part4: {fileID: 0}
+  part5: {fileID: 0}
 --- !u!114 &2002308741
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42254,10 +42294,12 @@ MonoBehaviour:
   Bubble_Particle2: {fileID: 248937807}
   Bubble_Particle3: {fileID: 1719580526}
   Bubble_Particle4: {fileID: 0}
+  Bubble_Particle5: {fileID: 0}
   part1: {fileID: 665402722}
   part2: {fileID: 1711947043}
   part3: {fileID: 1652349980}
   part4: {fileID: 0}
+  part5: {fileID: 0}
 --- !u!114 &2004596896
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44868,10 +44910,12 @@ MonoBehaviour:
   Bubble_Particle2: {fileID: 839045788}
   Bubble_Particle3: {fileID: 1455191535}
   Bubble_Particle4: {fileID: 0}
+  Bubble_Particle5: {fileID: 0}
   part1: {fileID: 1658856870}
   part2: {fileID: 748821640}
   part3: {fileID: 1163849321}
   part4: {fileID: 0}
+  part5: {fileID: 0}
 --- !u!114 &2087912106
 MonoBehaviour:
   m_ObjectHideFlags: 0

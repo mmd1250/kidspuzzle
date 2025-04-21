@@ -25,6 +25,8 @@ public class GameController : MonoBehaviour
     public AudioSource ResumeAudioSource;
 
 
+    public Animator Panel_Animator;
+
 
     public GameObject Level1;
     public GameObject Level2;
@@ -1178,6 +1180,7 @@ public class GameController : MonoBehaviour
     {
         pause.interactable = false;
         pausePanel.gameObject.SetActive(true);
+        Panel_Animator.SetTrigger("PanelShow");
         winLevel.pauseHelper = 1;
         part1.locked1 = true;
         part2.locked2 = true;
@@ -1190,7 +1193,8 @@ public class GameController : MonoBehaviour
     {
         ResumeAudioSource.Play();
         pause.interactable = true;
-        pausePanel.gameObject.SetActive(false);
+        Panel_Animator.SetTrigger("PanelHide");
+        //pausePanel.gameObject.SetActive(false);
         part1.locked1 = false;
         part2.locked2 = false;
         part3.locked3 = false;

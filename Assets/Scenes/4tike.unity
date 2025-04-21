@@ -2024,12 +2024,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 0.3
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -7138,10 +7138,12 @@ MonoBehaviour:
   Bubble_Particle2: {fileID: 1607962578}
   Bubble_Particle3: {fileID: 1201166641}
   Bubble_Particle4: {fileID: 1572178730}
+  Bubble_Particle5: {fileID: 0}
   part1: {fileID: 2048382951}
   part2: {fileID: 782155385}
   part3: {fileID: 1558606286}
   part4: {fileID: 1012330128}
+  part5: {fileID: 0}
 --- !u!114 &214092601
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8352,10 +8354,12 @@ MonoBehaviour:
   Bubble_Particle2: {fileID: 1629749739}
   Bubble_Particle3: {fileID: 1219707847}
   Bubble_Particle4: {fileID: 1477491525}
+  Bubble_Particle5: {fileID: 0}
   part1: {fileID: 1904680447}
   part2: {fileID: 505502020}
   part3: {fileID: 359326630}
   part4: {fileID: 532306770}
+  part5: {fileID: 0}
 --- !u!114 &269712811
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10179,10 +10183,12 @@ MonoBehaviour:
   Bubble_Particle2: {fileID: 558631303}
   Bubble_Particle3: {fileID: 2100403215}
   Bubble_Particle4: {fileID: 5707853}
+  Bubble_Particle5: {fileID: 0}
   part1: {fileID: 1918031299}
   part2: {fileID: 933147502}
   part3: {fileID: 1410713995}
   part4: {fileID: 89636344}
+  part5: {fileID: 0}
 --- !u!114 &336385629
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10505,10 +10511,12 @@ MonoBehaviour:
   Bubble_Particle2: {fileID: 110526411}
   Bubble_Particle3: {fileID: 998169488}
   Bubble_Particle4: {fileID: 2096442637}
+  Bubble_Particle5: {fileID: 0}
   part1: {fileID: 2080218383}
   part2: {fileID: 238218383}
   part3: {fileID: 2035279100}
   part4: {fileID: 1954285100}
+  part5: {fileID: 0}
 --- !u!114 &354681885
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14448,10 +14456,12 @@ MonoBehaviour:
   Bubble_Particle2: {fileID: 1417850093}
   Bubble_Particle3: {fileID: 1104714766}
   Bubble_Particle4: {fileID: 1490667543}
+  Bubble_Particle5: {fileID: 0}
   part1: {fileID: 2041290076}
   part2: {fileID: 793819480}
   part3: {fileID: 776162144}
   part4: {fileID: 211057318}
+  part5: {fileID: 0}
 --- !u!114 &487542279
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18799,10 +18809,12 @@ MonoBehaviour:
   Bubble_Particle2: {fileID: 2111614567}
   Bubble_Particle3: {fileID: 1154466134}
   Bubble_Particle4: {fileID: 246422021}
+  Bubble_Particle5: {fileID: 0}
   part1: {fileID: 1120763093}
   part2: {fileID: 1215358565}
   part3: {fileID: 1756004383}
   part4: {fileID: 637734050}
+  part5: {fileID: 0}
 --- !u!114 &637760679
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19404,7 +19416,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &670306925
 RectTransform:
   m_ObjectHideFlags: 0
@@ -20240,10 +20252,12 @@ MonoBehaviour:
   Bubble_Particle2: {fileID: 1750178790}
   Bubble_Particle3: {fileID: 138757450}
   Bubble_Particle4: {fileID: 851546450}
+  Bubble_Particle5: {fileID: 0}
   part1: {fileID: 1432026455}
   part2: {fileID: 192995402}
   part3: {fileID: 377003607}
   part4: {fileID: 882030030}
+  part5: {fileID: 0}
 --- !u!114 &697565082
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20810,10 +20824,12 @@ MonoBehaviour:
   Bubble_Particle2: {fileID: 1054467505}
   Bubble_Particle3: {fileID: 1052284531}
   Bubble_Particle4: {fileID: 1157499937}
+  Bubble_Particle5: {fileID: 0}
   part1: {fileID: 1928988084}
   part2: {fileID: 1441042673}
   part3: {fileID: 1195559331}
   part4: {fileID: 1415725998}
+  part5: {fileID: 0}
 --- !u!114 &737090733
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26384,10 +26400,12 @@ MonoBehaviour:
   Bubble_Particle2: {fileID: 1958217854}
   Bubble_Particle3: {fileID: 2110087295}
   Bubble_Particle4: {fileID: 784609715}
+  Bubble_Particle5: {fileID: 0}
   part1: {fileID: 610198013}
   part2: {fileID: 101139798}
   part3: {fileID: 791850364}
   part4: {fileID: 210570293}
+  part5: {fileID: 0}
 --- !u!114 &915909426
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28150,10 +28168,12 @@ MonoBehaviour:
   Bubble_Particle2: {fileID: 796372165}
   Bubble_Particle3: {fileID: 2087856395}
   Bubble_Particle4: {fileID: 326121600}
+  Bubble_Particle5: {fileID: 0}
   part1: {fileID: 323532294}
   part2: {fileID: 682846564}
   part3: {fileID: 484607358}
   part4: {fileID: 1297652012}
+  part5: {fileID: 0}
 --- !u!114 &954257691
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31361,10 +31381,12 @@ MonoBehaviour:
   Bubble_Particle2: {fileID: 640294228}
   Bubble_Particle3: {fileID: 1737361593}
   Bubble_Particle4: {fileID: 1647568961}
+  Bubble_Particle5: {fileID: 0}
   part1: {fileID: 1870736990}
   part2: {fileID: 1664074302}
   part3: {fileID: 378036952}
   part4: {fileID: 759519578}
+  part5: {fileID: 0}
 --- !u!114 &1096751243
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37190,10 +37212,12 @@ MonoBehaviour:
   Bubble_Particle2: {fileID: 65952626}
   Bubble_Particle3: {fileID: 1594282991}
   Bubble_Particle4: {fileID: 1596106331}
+  Bubble_Particle5: {fileID: 0}
   part1: {fileID: 547832900}
   part2: {fileID: 2035176066}
   part3: {fileID: 1464255591}
   part4: {fileID: 1450547501}
+  part5: {fileID: 0}
 --- !u!114 &1322821732
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52853,10 +52877,12 @@ MonoBehaviour:
   Bubble_Particle2: {fileID: 1455249637}
   Bubble_Particle3: {fileID: 1245399691}
   Bubble_Particle4: {fileID: 309853078}
+  Bubble_Particle5: {fileID: 0}
   part1: {fileID: 498758064}
   part2: {fileID: 72156333}
   part3: {fileID: 1428431358}
   part4: {fileID: 573964018}
+  part5: {fileID: 0}
 --- !u!114 &2002308741
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53084,10 +53110,12 @@ MonoBehaviour:
   Bubble_Particle2: {fileID: 992921483}
   Bubble_Particle3: {fileID: 1104357551}
   Bubble_Particle4: {fileID: 1174215292}
+  Bubble_Particle5: {fileID: 0}
   part1: {fileID: 665402722}
   part2: {fileID: 1711947043}
   part3: {fileID: 1652349980}
   part4: {fileID: 1886964006}
+  part5: {fileID: 0}
 --- !u!114 &2004596896
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -56150,10 +56178,12 @@ MonoBehaviour:
   Bubble_Particle2: {fileID: 971420274}
   Bubble_Particle3: {fileID: 1217661670}
   Bubble_Particle4: {fileID: 1209382526}
+  Bubble_Particle5: {fileID: 0}
   part1: {fileID: 1658856870}
   part2: {fileID: 748821640}
   part3: {fileID: 1163849321}
   part4: {fileID: 321831609}
+  part5: {fileID: 0}
 --- !u!114 &2087912106
 MonoBehaviour:
   m_ObjectHideFlags: 0

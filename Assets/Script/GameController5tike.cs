@@ -252,7 +252,7 @@ public class GameController5tike : MonoBehaviour
         {
             pause.interactable = false;
         }
-        Debug.Log("level" + selectedLevelNumber);
+        //Debug.Log("level" + selectedLevelNumber);
 
         switch (selectedLevelNumber)
         {
