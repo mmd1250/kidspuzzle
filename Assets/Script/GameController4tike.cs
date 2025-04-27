@@ -53,7 +53,10 @@ public class GameController4tike : MonoBehaviour
     public GameObject pausePanel;
 
 
+    //public AudioSource PlupSoundAudioSource;
 
+    public AudioSource PauseAudioSource;
+    public AudioSource ResumeAudioSource;
 
 
 
@@ -130,13 +133,13 @@ public class GameController4tike : MonoBehaviour
         if (PlayerPrefs.GetInt("sound", 1) == 1) // 1 mean on, 0 mean off
         {
             AudioListener.volume = 1;
-            sound.GetComponent<Image>().sprite = soundOn;
+            //sound.GetComponent<Image>().sprite = soundOn;
 
         }
         if (PlayerPrefs.GetInt("sound", 1) == 0) // 1 mean on, 0 mean off
         {
             AudioListener.volume = 0;
-            sound.GetComponent<Image>().sprite = soundOff;
+            //sound.GetComponent<Image>().sprite = soundOff;
 
 
         }
@@ -1202,6 +1205,7 @@ public class GameController4tike : MonoBehaviour
 
     public void pauseSelected()
     {
+        PauseAudioSource.Play();
         pause.interactable = false;
         pausePanel.gameObject.SetActive(true);
         Panel_Animator.SetTrigger("PanelShow");
@@ -1217,6 +1221,7 @@ public class GameController4tike : MonoBehaviour
     public void resumeSelected()
     {
         pause.interactable = true;
+        ResumeAudioSource.Play();
         Panel_Animator.SetTrigger("PanelHide");
         //pausePanel.gameObject.SetActive(false);
         part1.locked1 = false;

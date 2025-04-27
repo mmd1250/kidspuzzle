@@ -47,6 +47,9 @@ public class GameController5tike : MonoBehaviour
 
 
 
+    public AudioSource PanelExitAudioSoure;
+    public AudioSource ResumeAudioSoure;
+
     // public ParticleSystem fireWorks;
 
     public void request()
@@ -493,6 +496,7 @@ public class GameController5tike : MonoBehaviour
 
     public void pauseSelected()
     {
+        PanelExitAudioSoure.Play();
         pause.interactable = false;
         pausePanel.gameObject.SetActive(true);
         Panel_Animator.SetTrigger("PanelShow");
@@ -508,6 +512,7 @@ public class GameController5tike : MonoBehaviour
 
     public void resumeSelected()
     {
+        ResumeAudioSoure.Play();
         pause.interactable = true;
         Panel_Animator.SetTrigger("PanelHide");
         //pausePanel.gameObject.SetActive(false);

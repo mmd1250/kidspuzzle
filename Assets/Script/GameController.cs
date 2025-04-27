@@ -28,6 +28,9 @@ public class GameController : MonoBehaviour
     public Animator Panel_Animator;
 
 
+    public AudioSource PlupSound;
+
+
     public GameObject Level1;
     public GameObject Level2;
     public GameObject Level3;
@@ -147,13 +150,13 @@ public class GameController : MonoBehaviour
         if (PlayerPrefs.GetInt("sound", 1) == 1) // 1 mean on, 0 mean off
         {
             AudioListener.volume = 1;
-            sound.GetComponent<Image>().sprite = soundOn;
+            //sound.GetComponent<Image>().sprite = soundOn;
 
         }
         if (PlayerPrefs.GetInt("sound", 1) == 0) // 1 mean on, 0 mean off
         {
             AudioListener.volume = 0;
-            sound.GetComponent<Image>().sprite = soundOff;
+            //sound.GetComponent<Image>().sprite = soundOff;
 
 
         }
