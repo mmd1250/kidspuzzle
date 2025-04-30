@@ -23,6 +23,7 @@ public class Menu : MonoBehaviour
     public Sprite soundOff;
     public static int level;
 
+    public GameObject PlayBtn;
     public levelChooser lv3tike;
     public levelChooser lv4tike;
     public levelChooser lvDino;
@@ -57,14 +58,14 @@ public class Menu : MonoBehaviour
         if (PlayerPrefs.GetInt("sound", 1) == 1) // 1 mean on, 0 mean off
         {
             AudioListener.volume = 1;
-            sound.GetComponent<Image>().sprite = soundOn;
+            //sound.GetComponent<Image>().sprite = soundOn;
             Debug.Log("seda one");
 
         }
         if (PlayerPrefs.GetInt("sound", 1) == 0) // 1 mean on, 0 mean off
         {
             AudioListener.volume = 0;
-            sound.GetComponent<Image>().sprite = soundOff;
+            //sound.GetComponent<Image>().sprite = soundOff;
             Debug.Log("off boda");
 
 
@@ -122,6 +123,7 @@ public class Menu : MonoBehaviour
         Debug.Log("next  shod");
         Star_Particle.SetActive(false);
         mainMenu.SetActive(false);
+        PlayBtn.SetActive (false);
         LevelPages.SetActive(true);
         //levelSelected3tike.SetActive(true);
         lv3tike.Start();
@@ -133,6 +135,7 @@ public class Menu : MonoBehaviour
         Star_Particle.SetActive(true);
         mainMenu.SetActive(true);
         LevelPages.SetActive(false);
+        PlayBtn.SetActive(true);
         //levelSelected3tike.SetActive(false);
         //levelSelected4tike.SetActive(false);
         //levelSelectedDino.SetActive(false);

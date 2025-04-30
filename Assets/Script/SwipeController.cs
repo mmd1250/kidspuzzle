@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
@@ -16,6 +16,9 @@ public class SwipeController : MonoBehaviour,IEndDragHandler
     Vector3 TargetPos;
     [SerializeField] Vector3 PageStep;
     [SerializeField] RectTransform LevelPagesRect;
+
+    [SerializeField] ScrollRect scrollRect;
+
 
     [SerializeField] float tweenTime;
     [SerializeField] LeanTweenType tweenType;
@@ -43,7 +46,7 @@ public class SwipeController : MonoBehaviour,IEndDragHandler
     }
     public void Previous()
     {
-        if (currentPage > 1)
+        if (currentPage > 1 && currentPage !=1)
         {
             currentPage--;
             TargetPos -= PageStep;
@@ -67,17 +70,43 @@ public class SwipeController : MonoBehaviour,IEndDragHandler
         
     }
 
+
+    public void OnDrag(PointerEventData eventData)
+    {
+        float delta = eventData.position.x - eventData.pressPosition.x;
+
+        if (currentPage == 1 && delta > 0)
+        {
+            // توی صفحه اول هستیم و کاربر می‌خواد به چپ بکشه => جلوگیری می‌کنیم
+            eventData.Use();
+        }
+        else if (currentPage == maxPage && delta < 0)
+        {
+            // توی صفحه آخر هستیم و کاربر می‌خواد به راست بکشه => جلوگیری می‌کنیم
+            eventData.Use();
+        }
+    }
+
     public void OnEndDrag(PointerEventData eventData)
     {
-        if (Mathf.Abs(eventData.position.x - eventData.pressPosition.x) > DragThreshould)
+        float delta = eventData.position.x - eventData.pressPosition.x;
+        if (Mathf.Abs(delta) > DragThreshould)
         {
-            if (eventData.position.x > eventData.pressPosition.x)
+            if (delta > 0)
             {
-                Previous();
+                if (currentPage > 1) 
+                {
+                    Previous();
+                }
+                
             }
             else
             {
-                Next();
+                // کاربر کشید به سمت چپ (میخواد بره صفحه بعد)
+                if (currentPage < maxPage)
+                {
+                    Next();
+                }
             }
         }
         else
@@ -91,13 +120,17 @@ public class SwipeController : MonoBehaviour,IEndDragHandler
         previousBtn.interactable = true;
         if (currentPage == 1) 
         {
+            Menu.level = 1;
             previousBtn.interactable = false;
+            scrollRect.horizontal = false; // صفحه اول، جلو کشیدن رو می‌گیریم
             PageBarNum1.SetActive(true);
             PageBarNum2.SetActive(false);
             PageBarNum3.SetActive(false);
         }
         else if (currentPage == maxPage)
         {
+            Menu.level = 3;
+            scrollRect.horizontal = false; // صفحه آخر، عقب کشیدن رو می‌گیریم
             PageBarNum1.SetActive(false);
             PageBarNum2.SetActive(false);
             PageBarNum3.SetActive(true);
@@ -105,6 +138,7 @@ public class SwipeController : MonoBehaviour,IEndDragHandler
         }
         else
         {
+            Menu.level = 2;
             PageBarNum1.SetActive(false);
             PageBarNum2.SetActive(true);
             PageBarNum3.SetActive(false);

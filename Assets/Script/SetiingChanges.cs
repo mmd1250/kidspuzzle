@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class SetiingChanges : MonoBehaviour
 {
+    public Button StartBtn;
     public GameObject Panel;
     public Button SettingBtn;
     public AudioSource AudioSource;
@@ -25,11 +26,16 @@ public class SetiingChanges : MonoBehaviour
         SettingBtn.interactable = false;
         Panel.SetActive(true);
         AudioSource.Play();
+        StartBtn.interactable=false;
+        StartBtn.animator.enabled=false;
+        //Time.timeScale = 0f;
     }
     public void resumeSelected()
     {
         SettingBtn.interactable = true;
         Panel.gameObject.SetActive(false);
+        StartBtn.interactable=true;
+        StartBtn.animator.enabled=true;
         AudioSource.Play();
     }
     }

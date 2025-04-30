@@ -266,6 +266,12 @@ public class GameController5tike : MonoBehaviour
             case 31:
                 if (part1.locked1 && part2.locked2 && part3.locked3 && part4.locked4 && part5.locked5 && winLevel5part.winHelper == 1)
                 {
+                    if (selectedLevelNumber == LevelNumber)
+                    {
+
+                        PlayerPrefs.SetInt("LevelNumber", 32);
+
+                    }
                     adHelper++;
 
                     PlayerPrefs.SetInt("levelSelected", 32);
@@ -295,6 +301,12 @@ public class GameController5tike : MonoBehaviour
             case 32:
                 if (part1.locked1 && part2.locked2 && part3.locked3 && part4.locked4 && part5.locked5 && winLevel5part.winHelper == 1)
                 {
+                    if (selectedLevelNumber == LevelNumber)
+                    {
+
+                        PlayerPrefs.SetInt("LevelNumber", 33);
+
+                    }
                     adHelper++;
 
                     PlayerPrefs.SetInt("levelSelected", 33);
@@ -323,6 +335,12 @@ public class GameController5tike : MonoBehaviour
             case 33:
                 if (part1.locked1 && part2.locked2 && part3.locked3 && part4.locked4 && part5.locked5 && winLevel5part.winHelper == 1)
                 {
+                    if (selectedLevelNumber == LevelNumber)
+                    {
+
+                        PlayerPrefs.SetInt("LevelNumber", 34);
+
+                    }
                     adHelper++;
 
                     PlayerPrefs.SetInt("levelSelected", 34);
@@ -351,6 +369,12 @@ public class GameController5tike : MonoBehaviour
             case 34:
                 if (part1.locked1 && part2.locked2 && part3.locked3 && part4.locked4 && part5.locked5 && winLevel5part.winHelper == 1)
                 {
+                    if (selectedLevelNumber == LevelNumber)
+                    {
+
+                        PlayerPrefs.SetInt("LevelNumber", 35);
+
+                    }
                     adHelper++;
 
                     PlayerPrefs.SetInt("levelSelected", 35);

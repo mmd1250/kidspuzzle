@@ -9,6 +9,9 @@ using TapsellSDK;
 
 public class levelChooser : MonoBehaviour
 {
+    public int menulvl;
+
+    
     public GameObject loadingScreen; // گیم آبجکت صفحه لودینگ
     public Image loadingBarFill; // ایمیج مربوط به پر شدن نوار لودینگ
 
@@ -133,21 +136,1034 @@ public class levelChooser : MonoBehaviour
 
             Left1.interactable = false;
             Right1.interactable = true;
-
             LevelNumber = PlayerPrefs.GetInt("LevelNumber", 1);
             switch (LevelNumber)
             {
                 case 1:
 
-                    lvl1.interactable = true;
+                    lvl31.interactable = false;
+                    lvl32.interactable = false;
+                    lvl33.interactable = false;
+                    lvl34.interactable = false;
+                    lvl35.interactable = false;
 
+                    break;
+
+                case 2:
+                    lvl31.interactable = false;
+                    lvl32.interactable = false;
+                    lvl33.interactable = false;
+                    lvl34.interactable = false;
+                    lvl35.interactable = false;
+
+
+                    break;
+
+                case 3:
+                    lvl31.interactable = false;
+                    lvl32.interactable = false;
+                    lvl33.interactable = false;
+                    lvl34.interactable = false;
+                    lvl35.interactable = false;
+
+
+                    break;
+
+                case 4:
+                    lvl31.interactable = false;
+                    lvl32.interactable = false;
+                    lvl33.interactable = false;
+                    lvl34.interactable = false;
+                    lvl35.interactable = false;
+
+
+                    break;
+
+                case 5:
+                    lvl31.interactable = false;
+                    lvl32.interactable = false;
+                    lvl33.interactable = false;
+                    lvl34.interactable = false;
+                    lvl35.interactable = false;
+
+
+                    break;
+                case 6:
+                    lvl31.interactable = false;
+                    lvl32.interactable = false;
+                    lvl33.interactable = false;
+                    lvl34.interactable = false;
+                    lvl35.interactable = false;
+
+
+                    break;
+                case 7:
+                    lvl31.interactable = false;
+                    lvl32.interactable = false;
+                    lvl33.interactable = false;
+                    lvl34.interactable = false;
+                    lvl35.interactable = false;
+
+
+                    break;
+                case 8:
+                    lvl31.interactable = false;
+                    lvl32.interactable = false;
+                    lvl33.interactable = false;
+                    lvl34.interactable = false;
+                    lvl35.interactable = false;
+
+
+                    break;
+                case 9:
+                    lvl31.interactable = false;
+                    lvl32.interactable = false;
+                    lvl33.interactable = false;
+                    lvl34.interactable = false;
+                    lvl35.interactable = false;
+
+
+                    break;
+                case 10:
+                    lvl31.interactable = false;
+                    lvl32.interactable = false;
+                    lvl33.interactable = false;
+                    lvl34.interactable = false;
+                    lvl35.interactable = false;
+
+
+                    break;
+                case 11:
+                    lvl31.interactable = false;
+                    lvl32.interactable = false;
+                    lvl33.interactable = false;
+                    lvl34.interactable = false;
+                    lvl35.interactable = false;
+
+
+                    break;
+                case 12:
+                    lvl31.interactable = false;
+                    lvl32.interactable = false;
+                    lvl33.interactable = false;
+                    lvl34.interactable = false;
+                    lvl35.interactable = false;
+
+
+                    break;
+                case 13:
+                    lvl31.interactable = false;
+                    lvl32.interactable = false;
+                    lvl33.interactable = false;
+                    lvl34.interactable = false;
+                    lvl35.interactable = false;
+
+
+                    break;
+                case 14:
+                    lvl31.interactable = false;
+                    lvl32.interactable = false;
+                    lvl33.interactable = false;
+                    lvl34.interactable = false;
+                    lvl35.interactable = false;
+
+
+                    break;
+                case 15:
+                    lvl31.interactable = false;
+                    lvl32.interactable = false;
+                    lvl33.interactable = false;
+                    lvl34.interactable = false;
+                    lvl35.interactable = false;
+                    break;
+                case 16:
+                    lvl31.interactable = false;
+                    lvl32.interactable = false;
+                    lvl33.interactable = false;
+                    lvl34.interactable = false;
+                    lvl35.interactable = false;
+                    break;
+                case 17:
+                    lvl31.interactable = false;
+                    lvl32.interactable = false;
+                    lvl33.interactable = false;
+                    lvl34.interactable = false;
+                    lvl35.interactable = false;
+                    break;
+                case 18:
+                    lvl31.interactable = false;
+                    lvl32.interactable = false;
+                    lvl33.interactable = false;
+                    lvl34.interactable = false;
+                    lvl35.interactable = false;
+                    break;
+                case 19:
+                    lvl31.interactable = false;
+                    lvl32.interactable = false;
+                    lvl33.interactable = false;
+                    lvl34.interactable = false;
+                    lvl35.interactable = false;
+                    break;
+                case 20:
+                    lvl31.interactable = false;
+                    lvl32.interactable = false;
+                    lvl33.interactable = false;
+                    lvl34.interactable = false;
+                    lvl35.interactable = false;
+                    break;
+                case 21:
+                    lvl31.interactable = false;
+                    lvl32.interactable = false;
+                    lvl33.interactable = false;
+                    lvl34.interactable = false;
+                    lvl35.interactable = false;
+                    break;
+                case 22:
+                    lvl31.interactable = false;
+                    lvl32.interactable = false;
+                    lvl33.interactable = false;
+                    lvl34.interactable = false;
+                    lvl35.interactable = false;
+                    break;
+                case 23:
+                    lvl31.interactable = false;
+                    lvl32.interactable = false;
+                    lvl33.interactable = false;
+                    lvl34.interactable = false;
+                    lvl35.interactable = false;
+                    break;
+                case 24:
+                    lvl31.interactable = false;
+                    lvl32.interactable = false;
+                    lvl33.interactable = false;
+                    lvl34.interactable = false;
+                    lvl35.interactable = false;
+                    break;
+                case 25:
+                    lvl31.interactable = false;
+                    lvl32.interactable = false;
+                    lvl33.interactable = false;
+                    lvl34.interactable = false;
+                    lvl35.interactable = false;
+                    break;
+                case 26:
+                    lvl31.interactable = false;
+                    lvl32.interactable = false;
+                    lvl33.interactable = false;
+                    lvl34.interactable = false;
+                    lvl35.interactable = false;
+                    break;
+                case 27:
+                    lvl31.interactable = false;
+                    lvl32.interactable = false;
+                    lvl33.interactable = false;
+                    lvl34.interactable = false;
+                    lvl35.interactable = false;
+                    break;
+                case 28:
+                    lvl31.interactable = false;
+                    lvl32.interactable = false;
+                    lvl33.interactable = false;
+                    lvl34.interactable = false;
+                    lvl35.interactable = false;
+                    break;
+                case 29:
+                    lvl31.interactable = false;
+                    lvl32.interactable = false;
+                    lvl33.interactable = false;
+                    lvl34.interactable = false;
+                    lvl35.interactable = false;
+                    break;
+                case 30:
+                    lvl31.interactable = false;
+                    lvl32.interactable = false;
+                    lvl33.interactable = false;
+                    lvl34.interactable = false;
+                    lvl35.interactable = false;
+                    break;
+                case 31:
+                    lvl31.interactable = true;
+                    lvl32.interactable = false;
+                    lvl33.interactable = false;
+                    lvl34.interactable = false;
+                    lvl35.interactable = false;
+                    break;
+                case 32:
+                    lvl31.interactable = true;
+                    lvl32.interactable = true;
+                    lvl33.interactable = false;
+                    lvl34.interactable = false;
+                    lvl35.interactable = false;
+                    break;
+                case 33:
+                    lvl31.interactable = true;
+                    lvl32.interactable = true;
+                    lvl33.interactable = true;
+                    lvl34.interactable = false;
+                    lvl35.interactable = false;
+                    break;
+                case 34:
+                    lvl31.interactable = true;
+                    lvl32.interactable = true;
+                    lvl33.interactable = true;
+                    lvl34.interactable = true;
+                    lvl35.interactable = false;
+                    break;
+                case 35:
+                    lvl31.interactable = true;
+                    lvl32.interactable = true;
+                    lvl33.interactable = true;
+                    lvl34.interactable = true;
+                    lvl35.interactable = true;
+                    break;
+
+            }
+
+            switch (LevelNumber)
+            {
+                case 1:
+
+                    lvl16.interactable = false;
+                    lvl17.interactable = false;
+                    lvl18.interactable = false;
+                    lvl19.interactable = false;
+                    lvl20.interactable = false;
+                    lvl21.interactable = false;
+                    lvl22.interactable = false;
+                    lvl23.interactable = false;
+                    lvl24.interactable = false;
+                    lvl25.interactable = false;
+                    lvl26.interactable = false;
+                    lvl27.interactable = false;
+                    lvl28.interactable = false;
+                    lvl29.interactable = false;
+                    lvl30.interactable = false;
+                    break;
+
+                case 2:
+                    lvl16.interactable = false;
+                    lvl17.interactable = false;
+                    lvl18.interactable = false;
+                    lvl19.interactable = false;
+                    lvl20.interactable = false;
+                    lvl21.interactable = false;
+                    lvl22.interactable = false;
+                    lvl23.interactable = false;
+                    lvl24.interactable = false;
+                    lvl25.interactable = false;
+                    lvl26.interactable = false;
+                    lvl27.interactable = false;
+                    lvl28.interactable = false;
+                    lvl29.interactable = false;
+                    lvl30.interactable = false;
+
+
+                    break;
+
+                case 3:
+                    lvl16.interactable = false;
+                    lvl17.interactable = false;
+                    lvl18.interactable = false;
+                    lvl19.interactable = false;
+                    lvl20.interactable = false;
+                    lvl21.interactable = false;
+                    lvl22.interactable = false;
+                    lvl23.interactable = false;
+                    lvl24.interactable = false;
+                    lvl25.interactable = false;
+                    lvl26.interactable = false;
+                    lvl27.interactable = false;
+                    lvl28.interactable = false;
+                    lvl29.interactable = false;
+                    lvl30.interactable = false;
+
+
+                    break;
+
+                case 4:
+                    lvl16.interactable = false;
+                    lvl17.interactable = false;
+                    lvl18.interactable = false;
+                    lvl19.interactable = false;
+                    lvl20.interactable = false;
+                    lvl21.interactable = false;
+                    lvl22.interactable = false;
+                    lvl23.interactable = false;
+                    lvl24.interactable = false;
+                    lvl25.interactable = false;
+                    lvl26.interactable = false;
+                    lvl27.interactable = false;
+                    lvl28.interactable = false;
+                    lvl29.interactable = false;
+                    lvl30.interactable = false;
+
+
+                    break;
+
+                case 5:
+                    lvl16.interactable = false;
+                    lvl17.interactable = false;
+                    lvl18.interactable = false;
+                    lvl19.interactable = false;
+                    lvl20.interactable = false;
+                    lvl21.interactable = false;
+                    lvl22.interactable = false;
+                    lvl23.interactable = false;
+                    lvl24.interactable = false;
+                    lvl25.interactable = false;
+                    lvl26.interactable = false;
+                    lvl27.interactable = false;
+                    lvl28.interactable = false;
+                    lvl29.interactable = false;
+                    lvl30.interactable = false;
+
+
+                    break;
+                case 6:
+                    lvl16.interactable = false;
+                    lvl17.interactable = false;
+                    lvl18.interactable = false;
+                    lvl19.interactable = false;
+                    lvl20.interactable = false;
+                    lvl21.interactable = false;
+                    lvl22.interactable = false;
+                    lvl23.interactable = false;
+                    lvl24.interactable = false;
+                    lvl25.interactable = false;
+                    lvl26.interactable = false;
+                    lvl27.interactable = false;
+                    lvl28.interactable = false;
+                    lvl29.interactable = false;
+                    lvl30.interactable = false;
+
+
+                    break;
+                case 7:
+                    lvl16.interactable = false;
+                    lvl17.interactable = false;
+                    lvl18.interactable = false;
+                    lvl19.interactable = false;
+                    lvl20.interactable = false;
+                    lvl21.interactable = false;
+                    lvl22.interactable = false;
+                    lvl23.interactable = false;
+                    lvl24.interactable = false;
+                    lvl25.interactable = false;
+                    lvl26.interactable = false;
+                    lvl27.interactable = false;
+                    lvl28.interactable = false;
+                    lvl29.interactable = false;
+                    lvl30.interactable = false;
+
+
+                    break;
+                case 8:
+                    lvl16.interactable = false;
+                    lvl17.interactable = false;
+                    lvl18.interactable = false;
+                    lvl19.interactable = false;
+                    lvl20.interactable = false;
+                    lvl21.interactable = false;
+                    lvl22.interactable = false;
+                    lvl23.interactable = false;
+                    lvl24.interactable = false;
+                    lvl25.interactable = false;
+                    lvl26.interactable = false;
+                    lvl27.interactable = false;
+                    lvl28.interactable = false;
+                    lvl29.interactable = false;
+                    lvl30.interactable = false;
+
+
+                    break;
+                case 9:
+                    lvl16.interactable = false;
+                    lvl17.interactable = false;
+                    lvl18.interactable = false;
+                    lvl19.interactable = false;
+                    lvl20.interactable = false;
+                    lvl21.interactable = false;
+                    lvl22.interactable = false;
+                    lvl23.interactable = false;
+                    lvl24.interactable = false;
+                    lvl25.interactable = false;
+                    lvl26.interactable = false;
+                    lvl27.interactable = false;
+                    lvl28.interactable = false;
+                    lvl29.interactable = false;
+                    lvl30.interactable = false;
+
+
+                    break;
+                case 10:
+                    lvl16.interactable = false;
+                    lvl17.interactable = false;
+                    lvl18.interactable = false;
+                    lvl19.interactable = false;
+                    lvl20.interactable = false;
+                    lvl21.interactable = false;
+                    lvl22.interactable = false;
+                    lvl23.interactable = false;
+                    lvl24.interactable = false;
+                    lvl25.interactable = false;
+                    lvl26.interactable = false;
+                    lvl27.interactable = false;
+                    lvl28.interactable = false;
+                    lvl29.interactable = false;
+                    lvl30.interactable = false;
+
+
+                    break;
+                case 11:
+                    lvl16.interactable = false;
+                    lvl17.interactable = false;
+                    lvl18.interactable = false;
+                    lvl19.interactable = false;
+                    lvl20.interactable = false;
+                    lvl21.interactable = false;
+                    lvl22.interactable = false;
+                    lvl23.interactable = false;
+                    lvl24.interactable = false;
+                    lvl25.interactable = false;
+                    lvl26.interactable = false;
+                    lvl27.interactable = false;
+                    lvl28.interactable = false;
+                    lvl29.interactable = false;
+                    lvl30.interactable = false;
+
+
+                    break;
+                case 12:
+                    lvl16.interactable = false;
+                    lvl17.interactable = false;
+                    lvl18.interactable = false;
+                    lvl19.interactable = false;
+                    lvl20.interactable = false;
+                    lvl21.interactable = false;
+                    lvl22.interactable = false;
+                    lvl23.interactable = false;
+                    lvl24.interactable = false;
+                    lvl25.interactable = false;
+                    lvl26.interactable = false;
+                    lvl27.interactable = false;
+                    lvl28.interactable = false;
+                    lvl29.interactable = false;
+                    lvl30.interactable = false;
+
+
+                    break;
+                case 13:
+                    lvl16.interactable = false;
+                    lvl17.interactable = false;
+                    lvl18.interactable = false;
+                    lvl19.interactable = false;
+                    lvl20.interactable = false;
+                    lvl21.interactable = false;
+                    lvl22.interactable = false;
+                    lvl23.interactable = false;
+                    lvl24.interactable = false;
+                    lvl25.interactable = false;
+                    lvl26.interactable = false;
+                    lvl27.interactable = false;
+                    lvl28.interactable = false;
+                    lvl29.interactable = false;
+                    lvl30.interactable = false;
+
+
+                    break;
+                case 14:
+                    lvl16.interactable = false;
+                    lvl17.interactable = false;
+                    lvl18.interactable = false;
+                    lvl19.interactable = false;
+                    lvl20.interactable = false;
+                    lvl21.interactable = false;
+                    lvl22.interactable = false;
+                    lvl23.interactable = false;
+                    lvl24.interactable = false;
+                    lvl25.interactable = false;
+                    lvl26.interactable = false;
+                    lvl27.interactable = false;
+                    lvl28.interactable = false;
+                    lvl29.interactable = false;
+                    lvl30.interactable = false;
+
+
+                    break;
+                case 15:
+                    lvl16.interactable = false;
+                    lvl17.interactable = false;
+                    lvl18.interactable = false;
+                    lvl19.interactable = false;
+                    lvl20.interactable = false;
+                    lvl21.interactable = false;
+                    lvl22.interactable = false;
+                    lvl23.interactable = false;
+                    lvl24.interactable = false;
+                    lvl25.interactable = false;
+                    lvl26.interactable = false;
+                    lvl27.interactable = false;
+                    lvl28.interactable = false;
+                    lvl29.interactable = false;
+                    lvl30.interactable = false;
+
+
+                    break;
+                case 16:
+
+                    lvl16.interactable = true;
+                    lvl17.interactable = false;
+                    lvl18.interactable = false;
+                    lvl19.interactable = false;
+                    lvl20.interactable = false;
+                    lvl21.interactable = false;
+                    lvl22.interactable = false;
+                    lvl23.interactable = false;
+                    lvl24.interactable = false;
+                    lvl25.interactable = false;
+                    lvl26.interactable = false;
+                    lvl27.interactable = false;
+                    lvl28.interactable = false;
+                    lvl29.interactable = false;
+                    lvl30.interactable = false;
+
+                    break;
+                case 17:
+
+                    lvl16.interactable = true;
+                    lvl17.interactable = true;
+                    lvl18.interactable = false;
+                    lvl19.interactable = false;
+                    lvl20.interactable = false;
+                    lvl21.interactable = false;
+                    lvl22.interactable = false;
+                    lvl23.interactable = false;
+                    lvl24.interactable = false;
+                    lvl25.interactable = false;
+                    lvl26.interactable = false;
+                    lvl27.interactable = false;
+                    lvl28.interactable = false;
+                    lvl29.interactable = false;
+                    lvl30.interactable = false;
+
+
+                    break;
+                case 18:
+
+                    lvl16.interactable = true;
+                    lvl17.interactable = true;
+                    lvl18.interactable = true;
+                    lvl19.interactable = false;
+                    lvl20.interactable = false;
+                    lvl21.interactable = false;
+                    lvl22.interactable = false;
+                    lvl23.interactable = false;
+                    lvl24.interactable = false;
+                    lvl25.interactable = false;
+                    lvl26.interactable = false;
+                    lvl27.interactable = false;
+                    lvl28.interactable = false;
+                    lvl29.interactable = false;
+                    lvl30.interactable = false;
+
+                    break;
+                case 19:
+
+                    lvl16.interactable = true;
+                    lvl17.interactable = true;
+                    lvl18.interactable = true;
+                    lvl19.interactable = true;
+                    lvl20.interactable = false;
+                    lvl21.interactable = false;
+                    lvl22.interactable = false;
+                    lvl23.interactable = false;
+                    lvl24.interactable = false;
+                    lvl25.interactable = false;
+                    lvl26.interactable = false;
+                    lvl27.interactable = false;
+                    lvl28.interactable = false;
+                    lvl29.interactable = false;
+                    lvl30.interactable = false;
+
+
+                    break;
+                case 20:
+
+                    lvl16.interactable = true;
+                    lvl17.interactable = true;
+                    lvl18.interactable = true;
+                    lvl19.interactable = true;
+                    lvl20.interactable = true;
+                    lvl21.interactable = false;
+                    lvl22.interactable = false;
+                    lvl23.interactable = false;
+                    lvl24.interactable = false;
+                    lvl25.interactable = false;
+                    lvl26.interactable = false;
+                    lvl27.interactable = false;
+                    lvl28.interactable = false;
+                    lvl29.interactable = false;
+                    lvl30.interactable = false;
+
+
+                    break;
+                case 21:
+
+                    lvl16.interactable = true;
+                    lvl17.interactable = true;
+                    lvl18.interactable = true;
+                    lvl19.interactable = true;
+                    lvl20.interactable = true;
+                    lvl21.interactable = true;
+                    lvl22.interactable = false;
+                    lvl23.interactable = false;
+                    lvl24.interactable = false;
+                    lvl25.interactable = false;
+                    lvl26.interactable = false;
+                    lvl27.interactable = false;
+                    lvl28.interactable = false;
+                    lvl29.interactable = false;
+                    lvl30.interactable = false;
+
+
+                    break;
+                case 22:
+
+                    lvl16.interactable = true;
+                    lvl17.interactable = true;
+                    lvl18.interactable = true;
+                    lvl19.interactable = true;
+                    lvl20.interactable = true;
+                    lvl21.interactable = true;
+                    lvl22.interactable = true;
+                    lvl23.interactable = false;
+                    lvl24.interactable = false;
+                    lvl25.interactable = false;
+                    lvl26.interactable = false;
+                    lvl27.interactable = false;
+                    lvl28.interactable = false;
+                    lvl29.interactable = false;
+                    lvl30.interactable = false;
+
+
+                    break;
+                case 23:
+
+                    lvl16.interactable = true;
+                    lvl17.interactable = true;
+                    lvl18.interactable = true;
+                    lvl19.interactable = true;
+                    lvl20.interactable = true;
+                    lvl21.interactable = true;
+                    lvl22.interactable = true;
+                    lvl23.interactable = true;
+                    lvl24.interactable = false;
+                    lvl25.interactable = false;
+                    lvl26.interactable = false;
+                    lvl27.interactable = false;
+                    lvl28.interactable = false;
+                    lvl29.interactable = false;
+                    lvl30.interactable = false;
+
+
+                    break;
+                case 24:
+
+                    lvl16.interactable = true;
+                    lvl17.interactable = true;
+                    lvl18.interactable = true;
+                    lvl19.interactable = true;
+                    lvl20.interactable = true;
+                    lvl21.interactable = true;
+                    lvl22.interactable = true;
+                    lvl23.interactable = true;
+                    lvl24.interactable = true;
+                    lvl25.interactable = false;
+                    lvl26.interactable = false;
+                    lvl27.interactable = false;
+                    lvl28.interactable = false;
+                    lvl29.interactable = false;
+                    lvl30.interactable = false;
+
+                    break;
+                case 25:
+
+                    lvl16.interactable = true;
+                    lvl17.interactable = true;
+                    lvl18.interactable = true;
+                    lvl19.interactable = true;
+                    lvl20.interactable = true;
+                    lvl21.interactable = true;
+                    lvl22.interactable = true;
+                    lvl23.interactable = true;
+                    lvl24.interactable = true;
+                    lvl25.interactable = true;
+                    lvl26.interactable = false;
+                    lvl27.interactable = false;
+                    lvl28.interactable = false;
+                    lvl29.interactable = false;
+                    lvl30.interactable = false;
+
+
+                    break;
+                case 26:
+
+                    lvl16.interactable = true;
+                    lvl17.interactable = true;
+                    lvl18.interactable = true;
+                    lvl19.interactable = true;
+                    lvl20.interactable = true;
+                    lvl21.interactable = true;
+                    lvl22.interactable = true;
+                    lvl23.interactable = true;
+                    lvl24.interactable = true;
+                    lvl25.interactable = true;
+                    lvl26.interactable = true;
+                    lvl27.interactable = false;
+                    lvl28.interactable = false;
+                    lvl29.interactable = false;
+                    lvl30.interactable = false;
+
+
+                    break;
+                case 27:
+
+                    lvl16.interactable = true;
+                    lvl17.interactable = true;
+                    lvl18.interactable = true;
+                    lvl19.interactable = true;
+                    lvl20.interactable = true;
+                    lvl21.interactable = true;
+                    lvl22.interactable = true;
+                    lvl23.interactable = true;
+                    lvl24.interactable = true;
+                    lvl25.interactable = true;
+                    lvl26.interactable = true;
+                    lvl27.interactable = true;
+                    lvl28.interactable = false;
+                    lvl29.interactable = false;
+                    lvl30.interactable = false;
+
+
+                    break;
+                case 28:
+
+                    lvl16.interactable = true;
+                    lvl17.interactable = true;
+                    lvl18.interactable = true;
+                    lvl19.interactable = true;
+                    lvl20.interactable = true;
+                    lvl21.interactable = true;
+                    lvl22.interactable = true;
+                    lvl23.interactable = true;
+                    lvl24.interactable = true;
+                    lvl25.interactable = true;
+                    lvl26.interactable = true;
+                    lvl27.interactable = true;
+                    lvl28.interactable = true;
+                    lvl29.interactable = false;
+                    lvl30.interactable = false;
+
+
+                    break;
+                case 29:
+
+                    lvl16.interactable = true;
+                    lvl17.interactable = true;
+                    lvl18.interactable = true;
+                    lvl19.interactable = true;
+                    lvl20.interactable = true;
+                    lvl21.interactable = true;
+                    lvl22.interactable = true;
+                    lvl23.interactable = true;
+                    lvl24.interactable = true;
+                    lvl25.interactable = true;
+                    lvl26.interactable = true;
+                    lvl27.interactable = true;
+                    lvl28.interactable = true;
+                    lvl29.interactable = true;
+                    lvl30.interactable = false;
+
+
+                    break;
+                case 30:
+                    lvl16.interactable = true;
+                    lvl17.interactable = true;
+                    lvl18.interactable = true;
+                    lvl19.interactable = true;
+                    lvl20.interactable = true;
+                    lvl21.interactable = true;
+                    lvl22.interactable = true;
+                    lvl23.interactable = true;
+                    lvl24.interactable = true;
+                    lvl25.interactable = true;
+                    lvl26.interactable = true;
+                    lvl27.interactable = true;
+                    lvl28.interactable = true;
+                    lvl29.interactable = true;
+                    lvl30.interactable = true;
+
+
+                    break;
+                case 31:
+                    lvl16.interactable = true;
+                    lvl17.interactable = true;
+                    lvl18.interactable = true;
+                    lvl19.interactable = true;
+                    lvl20.interactable = true;
+                    lvl21.interactable = true;
+                    lvl22.interactable = true;
+                    lvl23.interactable = true;
+                    lvl24.interactable = true;
+                    lvl25.interactable = true;
+                    lvl26.interactable = true;
+                    lvl27.interactable = true;
+                    lvl28.interactable = true;
+                    lvl29.interactable = true;
+                    lvl30.interactable = true;
+
+
+                    break;
+                case 32:
+                    lvl16.interactable = true;
+                    lvl17.interactable = true;
+                    lvl18.interactable = true;
+                    lvl19.interactable = true;
+                    lvl20.interactable = true;
+                    lvl21.interactable = true;
+                    lvl22.interactable = true;
+                    lvl23.interactable = true;
+                    lvl24.interactable = true;
+                    lvl25.interactable = true;
+                    lvl26.interactable = true;
+                    lvl27.interactable = true;
+                    lvl28.interactable = true;
+                    lvl29.interactable = true;
+                    lvl30.interactable = true;
+
+
+                    break;
+                case 33:
+                    lvl16.interactable = true;
+                    lvl17.interactable = true;
+                    lvl18.interactable = true;
+                    lvl19.interactable = true;
+                    lvl20.interactable = true;
+                    lvl21.interactable = true;
+                    lvl22.interactable = true;
+                    lvl23.interactable = true;
+                    lvl24.interactable = true;
+                    lvl25.interactable = true;
+                    lvl26.interactable = true;
+                    lvl27.interactable = true;
+                    lvl28.interactable = true;
+                    lvl29.interactable = true;
+                    lvl30.interactable = true;
+
+
+                    break;
+                case 34:
+                    lvl16.interactable = true;
+                    lvl17.interactable = true;
+                    lvl18.interactable = true;
+                    lvl19.interactable = true;
+                    lvl20.interactable = true;
+                    lvl21.interactable = true;
+                    lvl22.interactable = true;
+                    lvl23.interactable = true;
+                    lvl24.interactable = true;
+                    lvl25.interactable = true;
+                    lvl26.interactable = true;
+                    lvl27.interactable = true;
+                    lvl28.interactable = true;
+                    lvl29.interactable = true;
+                    lvl30.interactable = true;
+
+
+                    break;
+                case 35:
+                    lvl16.interactable = true;
+                    lvl17.interactable = true;
+                    lvl18.interactable = true;
+                    lvl19.interactable = true;
+                    lvl20.interactable = true;
+                    lvl21.interactable = true;
+                    lvl22.interactable = true;
+                    lvl23.interactable = true;
+                    lvl24.interactable = true;
+                    lvl25.interactable = true;
+                    lvl26.interactable = true;
+                    lvl27.interactable = true;
+                    lvl28.interactable = true;
+                    lvl29.interactable = true;
+                    lvl30.interactable = true;
+
+
+                    break;
+
+
+            }
+
+            if (LevelNumber >= 1 && LevelNumber <= 15)
+            {
+                lvl16.interactable = false;
+                lvl17.interactable = false;
+                lvl18.interactable = false;
+                lvl19.interactable = false;
+                lvl20.interactable = false;
+                lvl21.interactable = false;
+                lvl22.interactable = false;
+                lvl23.interactable = false;
+                lvl24.interactable = false;
+                lvl25.interactable = false;
+                lvl26.interactable = false;
+                lvl27.interactable = false;
+                lvl28.interactable = false;
+                lvl29.interactable = false;
+                lvl30.interactable = false;
+            }
+            
+            switch (LevelNumber)
+            {
+                case 1:
+
+                    lvl1.interactable = true;
+                    lvl16.interactable = false;
+                    lvl17.interactable = false;
+                    lvl18.interactable = false;
+                    lvl19.interactable = false;
+                    lvl20.interactable = false;
+                    lvl21.interactable = false;
+                    lvl22.interactable = false;
+                    lvl23.interactable = false;
+                    lvl24.interactable = false;
+                    lvl25.interactable = false;
+                    lvl26.interactable = false;
+                    lvl27.interactable = false;
+                    lvl28.interactable = false;
+                    lvl29.interactable = false;
+                    lvl30.interactable = false;
+                    
                     break;
 
                 case 2:
                     lvl1.interactable = true;
                     lvl2.interactable = true;
-
-
+                    lvl16.interactable = false;
+                    lvl17.interactable = false;
+                    lvl18.interactable = false;
+                    lvl19.interactable = false;
+                    lvl20.interactable = false;
+                    lvl21.interactable = false;
+                    lvl22.interactable = false;
+                    lvl23.interactable = false;
+                    lvl24.interactable = false;
+                    lvl25.interactable = false;
+                    lvl26.interactable = false;
+                    lvl27.interactable = false;
+                    lvl28.interactable = false;
+                    lvl29.interactable = false;
+                    lvl30.interactable = false;
                     break;
 
                 case 3:
@@ -726,699 +1742,15 @@ public class levelChooser : MonoBehaviour
             Right2.interactable = true;
 
             LevelNumber = PlayerPrefs.GetInt("LevelNumber", 1);
-            switch (LevelNumber)
-            {
-                case 1:
-
-                    lvl16.interactable = false;
-                    lvl17.interactable = false;
-                    lvl18.interactable = false;
-                    lvl19.interactable = false;
-                    lvl20.interactable = false;
-                    lvl21.interactable = false;
-                    lvl22.interactable = false;
-                    lvl23.interactable = false;
-                    lvl24.interactable = false;
-                    lvl25.interactable = false;
-                    lvl26.interactable = false;
-                    lvl27.interactable = false;
-                    lvl28.interactable = false;
-                    lvl29.interactable = false;
-                    lvl30.interactable = false;
-                    break;
-
-                case 2:
-                    lvl16.interactable = false;
-                    lvl17.interactable = false;
-                    lvl18.interactable = false;
-                    lvl19.interactable = false;
-                    lvl20.interactable = false;
-                    lvl21.interactable = false;
-                    lvl22.interactable = false;
-                    lvl23.interactable = false;
-                    lvl24.interactable = false;
-                    lvl25.interactable = false;
-                    lvl26.interactable = false;
-                    lvl27.interactable = false;
-                    lvl28.interactable = false;
-                    lvl29.interactable = false;
-                    lvl30.interactable = false;
-
-
-                    break;
-
-                case 3:
-                    lvl16.interactable = false;
-                    lvl17.interactable = false;
-                    lvl18.interactable = false;
-                    lvl19.interactable = false;
-                    lvl20.interactable = false;
-                    lvl21.interactable = false;
-                    lvl22.interactable = false;
-                    lvl23.interactable = false;
-                    lvl24.interactable = false;
-                    lvl25.interactable = false;
-                    lvl26.interactable = false;
-                    lvl27.interactable = false;
-                    lvl28.interactable = false;
-                    lvl29.interactable = false;
-                    lvl30.interactable = false;
-
-
-                    break;
-
-                case 4:
-                    lvl16.interactable = false;
-                    lvl17.interactable = false;
-                    lvl18.interactable = false;
-                    lvl19.interactable = false;
-                    lvl20.interactable = false;
-                    lvl21.interactable = false;
-                    lvl22.interactable = false;
-                    lvl23.interactable = false;
-                    lvl24.interactable = false;
-                    lvl25.interactable = false;
-                    lvl26.interactable = false;
-                    lvl27.interactable = false;
-                    lvl28.interactable = false;
-                    lvl29.interactable = false;
-                    lvl30.interactable = false;
-
-
-                    break;
-
-                case 5:
-                    lvl16.interactable = false;
-                    lvl17.interactable = false;
-                    lvl18.interactable = false;
-                    lvl19.interactable = false;
-                    lvl20.interactable = false;
-                    lvl21.interactable = false;
-                    lvl22.interactable = false;
-                    lvl23.interactable = false;
-                    lvl24.interactable = false;
-                    lvl25.interactable = false;
-                    lvl26.interactable = false;
-                    lvl27.interactable = false;
-                    lvl28.interactable = false;
-                    lvl29.interactable = false;
-                    lvl30.interactable = false;
-
-
-                    break;
-                case 6:
-                    lvl16.interactable = false;
-                    lvl17.interactable = false;
-                    lvl18.interactable = false;
-                    lvl19.interactable = false;
-                    lvl20.interactable = false;
-                    lvl21.interactable = false;
-                    lvl22.interactable = false;
-                    lvl23.interactable = false;
-                    lvl24.interactable = false;
-                    lvl25.interactable = false;
-                    lvl26.interactable = false;
-                    lvl27.interactable = false;
-                    lvl28.interactable = false;
-                    lvl29.interactable = false;
-                    lvl30.interactable = false;
-
-
-                    break;
-                case 7:
-                    lvl16.interactable = false;
-                    lvl17.interactable = false;
-                    lvl18.interactable = false;
-                    lvl19.interactable = false;
-                    lvl20.interactable = false;
-                    lvl21.interactable = false;
-                    lvl22.interactable = false;
-                    lvl23.interactable = false;
-                    lvl24.interactable = false;
-                    lvl25.interactable = false;
-                    lvl26.interactable = false;
-                    lvl27.interactable = false;
-                    lvl28.interactable = false;
-                    lvl29.interactable = false;
-                    lvl30.interactable = false;
-
-
-                    break;
-                case 8:
-                    lvl16.interactable = false;
-                    lvl17.interactable = false;
-                    lvl18.interactable = false;
-                    lvl19.interactable = false;
-                    lvl20.interactable = false;
-                    lvl21.interactable = false;
-                    lvl22.interactable = false;
-                    lvl23.interactable = false;
-                    lvl24.interactable = false;
-                    lvl25.interactable = false;
-                    lvl26.interactable = false;
-                    lvl27.interactable = false;
-                    lvl28.interactable = false;
-                    lvl29.interactable = false;
-                    lvl30.interactable = false;
-
-
-                    break;
-                case 9:
-                    lvl16.interactable = false;
-                    lvl17.interactable = false;
-                    lvl18.interactable = false;
-                    lvl19.interactable = false;
-                    lvl20.interactable = false;
-                    lvl21.interactable = false;
-                    lvl22.interactable = false;
-                    lvl23.interactable = false;
-                    lvl24.interactable = false;
-                    lvl25.interactable = false;
-                    lvl26.interactable = false;
-                    lvl27.interactable = false;
-                    lvl28.interactable = false;
-                    lvl29.interactable = false;
-                    lvl30.interactable = false;
-
-
-                    break;
-                case 10:
-                    lvl16.interactable = false;
-                    lvl17.interactable = false;
-                    lvl18.interactable = false;
-                    lvl19.interactable = false;
-                    lvl20.interactable = false;
-                    lvl21.interactable = false;
-                    lvl22.interactable = false;
-                    lvl23.interactable = false;
-                    lvl24.interactable = false;
-                    lvl25.interactable = false;
-                    lvl26.interactable = false;
-                    lvl27.interactable = false;
-                    lvl28.interactable = false;
-                    lvl29.interactable = false;
-                    lvl30.interactable = false;
-
-
-                    break;
-                case 11:
-                    lvl16.interactable = false;
-                    lvl17.interactable = false;
-                    lvl18.interactable = false;
-                    lvl19.interactable = false;
-                    lvl20.interactable = false;
-                    lvl21.interactable = false;
-                    lvl22.interactable = false;
-                    lvl23.interactable = false;
-                    lvl24.interactable = false;
-                    lvl25.interactable = false;
-                    lvl26.interactable = false;
-                    lvl27.interactable = false;
-                    lvl28.interactable = false;
-                    lvl29.interactable = false;
-                    lvl30.interactable = false;
-
-
-                    break;
-                case 12:
-                    lvl16.interactable = false;
-                    lvl17.interactable = false;
-                    lvl18.interactable = false;
-                    lvl19.interactable = false;
-                    lvl20.interactable = false;
-                    lvl21.interactable = false;
-                    lvl22.interactable = false;
-                    lvl23.interactable = false;
-                    lvl24.interactable = false;
-                    lvl25.interactable = false;
-                    lvl26.interactable = false;
-                    lvl27.interactable = false;
-                    lvl28.interactable = false;
-                    lvl29.interactable = false;
-                    lvl30.interactable = false;
-
-
-                    break;
-                case 13:
-                    lvl16.interactable = false;
-                    lvl17.interactable = false;
-                    lvl18.interactable = false;
-                    lvl19.interactable = false;
-                    lvl20.interactable = false;
-                    lvl21.interactable = false;
-                    lvl22.interactable = false;
-                    lvl23.interactable = false;
-                    lvl24.interactable = false;
-                    lvl25.interactable = false;
-                    lvl26.interactable = false;
-                    lvl27.interactable = false;
-                    lvl28.interactable = false;
-                    lvl29.interactable = false;
-                    lvl30.interactable = false;
-
-
-                    break;
-                case 14:
-                    lvl16.interactable = false;
-                    lvl17.interactable = false;
-                    lvl18.interactable = false;
-                    lvl19.interactable = false;
-                    lvl20.interactable = false;
-                    lvl21.interactable = false;
-                    lvl22.interactable = false;
-                    lvl23.interactable = false;
-                    lvl24.interactable = false;
-                    lvl25.interactable = false;
-                    lvl26.interactable = false;
-                    lvl27.interactable = false;
-                    lvl28.interactable = false;
-                    lvl29.interactable = false;
-                    lvl30.interactable = false;
-
-
-                    break;
-                case 15:
-                    lvl16.interactable = false;
-                    lvl17.interactable = false;
-                    lvl18.interactable = false;
-                    lvl19.interactable = false;
-                    lvl20.interactable = false;
-                    lvl21.interactable = false;
-                    lvl22.interactable = false;
-                    lvl23.interactable = false;
-                    lvl24.interactable = false;
-                    lvl25.interactable = false;
-                    lvl26.interactable = false;
-                    lvl27.interactable = false;
-                    lvl28.interactable = false;
-                    lvl29.interactable = false;
-                    lvl30.interactable = false;
-
-
-                    break;
-                case 16:
-
-                    lvl16.interactable = true;
-                    lvl17.interactable = false;
-                    lvl18.interactable = false;
-                    lvl19.interactable = false;
-                    lvl20.interactable = false;
-                    lvl21.interactable = false;
-                    lvl22.interactable = false;
-                    lvl23.interactable = false;
-                    lvl24.interactable = false;
-                    lvl25.interactable = false;
-                    lvl26.interactable = false;
-                    lvl27.interactable = false;
-                    lvl28.interactable = false;
-                    lvl29.interactable = false;
-                    lvl30.interactable = false;
-
-                    break;
-                case 17:
-
-                    lvl16.interactable = true;
-                    lvl17.interactable = true;
-                    lvl18.interactable = false;
-                    lvl19.interactable = false;
-                    lvl20.interactable = false;
-                    lvl21.interactable = false;
-                    lvl22.interactable = false;
-                    lvl23.interactable = false;
-                    lvl24.interactable = false;
-                    lvl25.interactable = false;
-                    lvl26.interactable = false;
-                    lvl27.interactable = false;
-                    lvl28.interactable = false;
-                    lvl29.interactable = false;
-                    lvl30.interactable = false;
-
-
-                    break;
-                case 18:
-
-                    lvl16.interactable = true;
-                    lvl17.interactable = true;
-                    lvl18.interactable = true;
-                    lvl19.interactable = false;
-                    lvl20.interactable = false;
-                    lvl21.interactable = false;
-                    lvl22.interactable = false;
-                    lvl23.interactable = false;
-                    lvl24.interactable = false;
-                    lvl25.interactable = false;
-                    lvl26.interactable = false;
-                    lvl27.interactable = false;
-                    lvl28.interactable = false;
-                    lvl29.interactable = false;
-                    lvl30.interactable = false;
-
-                    break;
-                case 19:
-
-                    lvl16.interactable = true;
-                    lvl17.interactable = true;
-                    lvl18.interactable = true;
-                    lvl19.interactable = true;
-                    lvl20.interactable = false;
-                    lvl21.interactable = false;
-                    lvl22.interactable = false;
-                    lvl23.interactable = false;
-                    lvl24.interactable = false;
-                    lvl25.interactable = false;
-                    lvl26.interactable = false;
-                    lvl27.interactable = false;
-                    lvl28.interactable = false;
-                    lvl29.interactable = false;
-                    lvl30.interactable = false;
-
-
-                    break;
-                case 20:
-
-                    lvl16.interactable = true;
-                    lvl17.interactable = true;
-                    lvl18.interactable = true;
-                    lvl19.interactable = true;
-                    lvl20.interactable = true;
-                    lvl21.interactable = false;
-                    lvl22.interactable = false;
-                    lvl23.interactable = false;
-                    lvl24.interactable = false;
-                    lvl25.interactable = false;
-                    lvl26.interactable = false;
-                    lvl27.interactable = false;
-                    lvl28.interactable = false;
-                    lvl29.interactable = false;
-                    lvl30.interactable = false;
-
-
-                    break;
-                case 21:
-
-                    lvl16.interactable = true;
-                    lvl17.interactable = true;
-                    lvl18.interactable = true;
-                    lvl19.interactable = true;
-                    lvl20.interactable = true;
-                    lvl21.interactable = true;
-                    lvl22.interactable = false;
-                    lvl23.interactable = false;
-                    lvl24.interactable = false;
-                    lvl25.interactable = false;
-                    lvl26.interactable = false;
-                    lvl27.interactable = false;
-                    lvl28.interactable = false;
-                    lvl29.interactable = false;
-                    lvl30.interactable = false;
-
-
-                    break;
-                case 22:
-
-                    lvl16.interactable = true;
-                    lvl17.interactable = true;
-                    lvl18.interactable = true;
-                    lvl19.interactable = true;
-                    lvl20.interactable = true;
-                    lvl21.interactable = true;
-                    lvl22.interactable = true;
-                    lvl23.interactable = false;
-                    lvl24.interactable = false;
-                    lvl25.interactable = false;
-                    lvl26.interactable = false;
-                    lvl27.interactable = false;
-                    lvl28.interactable = false;
-                    lvl29.interactable = false;
-                    lvl30.interactable = false;
-
-
-                    break;
-                case 23:
-
-                    lvl16.interactable = true;
-                    lvl17.interactable = true;
-                    lvl18.interactable = true;
-                    lvl19.interactable = true;
-                    lvl20.interactable = true;
-                    lvl21.interactable = true;
-                    lvl22.interactable = true;
-                    lvl23.interactable = true;
-                    lvl24.interactable = false;
-                    lvl25.interactable = false;
-                    lvl26.interactable = false;
-                    lvl27.interactable = false;
-                    lvl28.interactable = false;
-                    lvl29.interactable = false;
-                    lvl30.interactable = false;
-
-
-                    break;
-                case 24:
-
-                    lvl16.interactable = true;
-                    lvl17.interactable = true;
-                    lvl18.interactable = true;
-                    lvl19.interactable = true;
-                    lvl20.interactable = true;
-                    lvl21.interactable = true;
-                    lvl22.interactable = true;
-                    lvl23.interactable = true;
-                    lvl24.interactable = true;
-                    lvl25.interactable = false;
-                    lvl26.interactable = false;
-                    lvl27.interactable = false;
-                    lvl28.interactable = false;
-                    lvl29.interactable = false;
-                    lvl30.interactable = false;
-
-                    break;
-                case 25:
-
-                    lvl16.interactable = true;
-                    lvl17.interactable = true;
-                    lvl18.interactable = true;
-                    lvl19.interactable = true;
-                    lvl20.interactable = true;
-                    lvl21.interactable = true;
-                    lvl22.interactable = true;
-                    lvl23.interactable = true;
-                    lvl24.interactable = true;
-                    lvl25.interactable = true;
-                    lvl26.interactable = false;
-                    lvl27.interactable = false;
-                    lvl28.interactable = false;
-                    lvl29.interactable = false;
-                    lvl30.interactable = false;
-
-
-                    break;
-                case 26:
-
-                    lvl16.interactable = true;
-                    lvl17.interactable = true;
-                    lvl18.interactable = true;
-                    lvl19.interactable = true;
-                    lvl20.interactable = true;
-                    lvl21.interactable = true;
-                    lvl22.interactable = true;
-                    lvl23.interactable = true;
-                    lvl24.interactable = true;
-                    lvl25.interactable = true;
-                    lvl26.interactable = true;
-                    lvl27.interactable = false;
-                    lvl28.interactable = false;
-                    lvl29.interactable = false;
-                    lvl30.interactable = false;
-
-
-                    break;
-                case 27:
-
-                    lvl16.interactable = true;
-                    lvl17.interactable = true;
-                    lvl18.interactable = true;
-                    lvl19.interactable = true;
-                    lvl20.interactable = true;
-                    lvl21.interactable = true;
-                    lvl22.interactable = true;
-                    lvl23.interactable = true;
-                    lvl24.interactable = true;
-                    lvl25.interactable = true;
-                    lvl26.interactable = true;
-                    lvl27.interactable = true;
-                    lvl28.interactable = false;
-                    lvl29.interactable = false;
-                    lvl30.interactable = false;
-
-
-                    break;
-                case 28:
-
-                    lvl16.interactable = true;
-                    lvl17.interactable = true;
-                    lvl18.interactable = true;
-                    lvl19.interactable = true;
-                    lvl20.interactable = true;
-                    lvl21.interactable = true;
-                    lvl22.interactable = true;
-                    lvl23.interactable = true;
-                    lvl24.interactable = true;
-                    lvl25.interactable = true;
-                    lvl26.interactable = true;
-                    lvl27.interactable = true;
-                    lvl28.interactable = true;
-                    lvl29.interactable = false;
-                    lvl30.interactable = false;
-
-
-                    break;
-                case 29:
-
-                    lvl16.interactable = true;
-                    lvl17.interactable = true;
-                    lvl18.interactable = true;
-                    lvl19.interactable = true;
-                    lvl20.interactable = true;
-                    lvl21.interactable = true;
-                    lvl22.interactable = true;
-                    lvl23.interactable = true;
-                    lvl24.interactable = true;
-                    lvl25.interactable = true;
-                    lvl26.interactable = true;
-                    lvl27.interactable = true;
-                    lvl28.interactable = true;
-                    lvl29.interactable = true;
-                    lvl30.interactable = false;
-
-
-                    break;
-                case 30:
-                    lvl16.interactable = true;
-                    lvl17.interactable = true;
-                    lvl18.interactable = true;
-                    lvl19.interactable = true;
-                    lvl20.interactable = true;
-                    lvl21.interactable = true;
-                    lvl22.interactable = true;
-                    lvl23.interactable = true;
-                    lvl24.interactable = true;
-                    lvl25.interactable = true;
-                    lvl26.interactable = true;
-                    lvl27.interactable = true;
-                    lvl28.interactable = true;
-                    lvl29.interactable = true;
-                    lvl30.interactable = true;
-
-
-                    break;
-                case 31:
-                    lvl16.interactable = true;
-                    lvl17.interactable = true;
-                    lvl18.interactable = true;
-                    lvl19.interactable = true;
-                    lvl20.interactable = true;
-                    lvl21.interactable = true;
-                    lvl22.interactable = true;
-                    lvl23.interactable = true;
-                    lvl24.interactable = true;
-                    lvl25.interactable = true;
-                    lvl26.interactable = true;
-                    lvl27.interactable = true;
-                    lvl28.interactable = true;
-                    lvl29.interactable = true;
-                    lvl30.interactable = true;
-
-
-                    break;
-                case 32:
-                    lvl16.interactable = true;
-                    lvl17.interactable = true;
-                    lvl18.interactable = true;
-                    lvl19.interactable = true;
-                    lvl20.interactable = true;
-                    lvl21.interactable = true;
-                    lvl22.interactable = true;
-                    lvl23.interactable = true;
-                    lvl24.interactable = true;
-                    lvl25.interactable = true;
-                    lvl26.interactable = true;
-                    lvl27.interactable = true;
-                    lvl28.interactable = true;
-                    lvl29.interactable = true;
-                    lvl30.interactable = true;
-
-
-                    break;
-                case 33:
-                    lvl16.interactable = true;
-                    lvl17.interactable = true;
-                    lvl18.interactable = true;
-                    lvl19.interactable = true;
-                    lvl20.interactable = true;
-                    lvl21.interactable = true;
-                    lvl22.interactable = true;
-                    lvl23.interactable = true;
-                    lvl24.interactable = true;
-                    lvl25.interactable = true;
-                    lvl26.interactable = true;
-                    lvl27.interactable = true;
-                    lvl28.interactable = true;
-                    lvl29.interactable = true;
-                    lvl30.interactable = true;
-
-
-                    break;
-                case 34:
-                    lvl16.interactable = true;
-                    lvl17.interactable = true;
-                    lvl18.interactable = true;
-                    lvl19.interactable = true;
-                    lvl20.interactable = true;
-                    lvl21.interactable = true;
-                    lvl22.interactable = true;
-                    lvl23.interactable = true;
-                    lvl24.interactable = true;
-                    lvl25.interactable = true;
-                    lvl26.interactable = true;
-                    lvl27.interactable = true;
-                    lvl28.interactable = true;
-                    lvl29.interactable = true;
-                    lvl30.interactable = true;
-
-
-                    break;
-                case 35:
-                    lvl16.interactable = true;
-                    lvl17.interactable = true;
-                    lvl18.interactable = true;
-                    lvl19.interactable = true;
-                    lvl20.interactable = true;
-                    lvl21.interactable = true;
-                    lvl22.interactable = true;
-                    lvl23.interactable = true;
-                    lvl24.interactable = true;
-                    lvl25.interactable = true;
-                    lvl26.interactable = true;
-                    lvl27.interactable = true;
-                    lvl28.interactable = true;
-                    lvl29.interactable = true;
-                    lvl30.interactable = true;
-
-
-                    break;
-
-
-            }
 
         }
 
         if (Menu.level == 3)
         {
-            starNumber.text = PlayerPrefs.GetInt("Star", 0).ToString();
+            //starNumber.text = PlayerPrefs.GetInt("Star", 0).ToString();
 
-            if(PlayerPrefs.GetInt("BonusLock", 1) ==1)
-            {
+            //if(PlayerPrefs.GetInt("BonusLock", 1) ==1)
+            //{
                 lvl31.interactable = false;
                 lvl32.interactable = false;
                 lvl33.interactable = false;
@@ -1426,22 +1758,15 @@ public class levelChooser : MonoBehaviour
                 lvl35.interactable = false;
                 unLock.gameObject.SetActive(true);
 
-            }
-            else
-            {
-                lvl31.interactable = true;
-                lvl32.interactable = true;
-                lvl33.interactable = true;
-                lvl34.interactable = true;
-                lvl35.interactable = true;
-                unLock.gameObject.SetActive(false);
-            }
+            //}
+            //else
+            LevelNumber = PlayerPrefs.GetInt("LevelNumber", 1);
 
 
             Left3.interactable = true;
             Right3.interactable = false;
 
-            LevelNumber = PlayerPrefs.GetInt("LevelNumber", 1);
+            //LevelNumber = PlayerPrefs.GetInt("LevelNumber", 1);
 
         }
 
@@ -1683,7 +2008,10 @@ public class levelChooser : MonoBehaviour
 
     }
     // Update is called once per frame
-
+    public void Update()
+    {
+        menulvl = Menu.level;
+    }
     public void buyPuzzle()
     {
         BazaarBilling.Purchase(unlock, (result) =>
@@ -1793,6 +2121,22 @@ public class levelChooser : MonoBehaviour
         yield return new WaitForSeconds(3f); // منتظر ماندن به مدت ۳ ثانیه
 
         loadingScreen.SetActive(false); // غیرفعال کردن گیم‌ آبجکت
+    }
+    public void lvlnumbertestlog()
+    {
+        Debug.Log(LevelNumber);
+    }
+    public void ResetLevels()
+    {
+        //PlayerPrefs.DeleteKey("levelnumber");
+        PlayerPrefs.SetInt("LevelNumber", 1);
+        //LevelNumber = 1;
+    }
+    public void GiveLevels()
+    {
+        //PlayerPrefs.DeleteKey("levelnumber");
+        PlayerPrefs.SetInt("LevelNumber", 29);
+        //LevelNumber = 1;
     }
 }
 

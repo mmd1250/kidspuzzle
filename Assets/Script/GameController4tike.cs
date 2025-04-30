@@ -1102,10 +1102,10 @@ public class GameController4tike : MonoBehaviour
                 {
                     if (selectedLevelNumber == LevelNumber)
                     {
-                        PlayerPrefs.SetInt("LevelNumber", 30);
+                        PlayerPrefs.SetInt("LevelNumber", 31);
 
                     }
-                    PlayerPrefs.SetInt("levelSelected", 30);
+                    PlayerPrefs.SetInt("levelSelected", 31);
                     Debug.Log("5");
                     // fireWorks.enableEmission = true;
 
@@ -1118,7 +1118,8 @@ public class GameController4tike : MonoBehaviour
                     part4.locked4 = false;
 
                     winLevel4part.winHelper = 0;
-                    SceneManager.LoadScene("Menu");
+                    SceneManager.LoadScene("5tike");
+                    //SceneManager.LoadScene("Menu");
 
 
                 }
