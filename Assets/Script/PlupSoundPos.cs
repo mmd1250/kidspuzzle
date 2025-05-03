@@ -2,12 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using UnityEngine.UI;
+using UnityEngine.UIElements;
+
 public class PlupSoundPos : MonoBehaviour
 {
     private int SwitchStatus = 1;
     public GameObject PlupSwitchButton;
     public AudioSource EnterPanelSound;
     public AudioSource ResumeSound;
+    public GameObject BackGround;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +32,8 @@ public class PlupSoundPos : MonoBehaviour
         {
             ResumeSound.volume = 1;
             EnterPanelSound.volume = 1;
+            BackGround.GetComponent<RawImage>().color = Color.green;
+
             //sound.GetComponent<Image>().sprite = soundOn;
 
         }
@@ -35,6 +41,8 @@ public class PlupSoundPos : MonoBehaviour
         {
             ResumeSound.volume = 0;
             EnterPanelSound.volume = 0;
+            BackGround.GetComponent<RawImage>().color = Color.red;
+
             //sound.GetComponent<Image>().sprite = soundOff;
 
 
@@ -54,12 +62,15 @@ public class PlupSoundPos : MonoBehaviour
             ResumeSound.volume = 1;
             EnterPanelSound.volume = 1;
             PlayerPrefs.SetInt("PlupSound", 1);
+            BackGround.GetComponent<RawImage>().color = Color.green;
         }
         else if (SwitchStatus == -1)
         {
             ResumeSound.volume = 0;
             EnterPanelSound.volume = 0;
             PlayerPrefs.SetInt("PlupSound", 0);
+            BackGround.GetComponent<RawImage>().color = Color.red;
+
         }
         PlayerPrefs.Save();
     }

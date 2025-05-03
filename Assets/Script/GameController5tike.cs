@@ -23,7 +23,7 @@ public class GameController5tike : MonoBehaviour
 
     public Animator Panel_Animator;
 
-    public Text starNumber;
+    //public Text starNumber;
     int tapsellHelper;  // for avalabing ad
 
 
@@ -120,17 +120,17 @@ public class GameController5tike : MonoBehaviour
         adHelper = 0;
         request();
 
-        starNumber.text = PlayerPrefs.GetInt("Star", 0).ToString();
+        //starNumber.text = PlayerPrefs.GetInt("Star", 0).ToString();
 
         if (PlayerPrefs.GetInt("sound", 1) == 1) // 1 mean on, 0 mean off
         {
-            AudioListener.volume = 1;
+            //AudioListener.volume = 1;
             //sound.GetComponent<Image>().sprite = soundOn;
 
         }
         if (PlayerPrefs.GetInt("sound", 1) == 0) // 1 mean on, 0 mean off
         {
-            AudioListener.volume = 0;
+            //AudioListener.volume = 0;
             //sound.GetComponent<Image>().sprite = soundOff;
 
 
@@ -155,6 +155,7 @@ public class GameController5tike : MonoBehaviour
 
 
         pausePanel.gameObject.SetActive(false);
+        LevelNumber = PlayerPrefs.GetInt("LevelNumber", 31);
         selectedLevelNumber = PlayerPrefs.GetInt("levelSelected", 31);
 
         switch (selectedLevelNumber)
@@ -266,15 +267,16 @@ public class GameController5tike : MonoBehaviour
             case 31:
                 if (part1.locked1 && part2.locked2 && part3.locked3 && part4.locked4 && part5.locked5 && winLevel5part.winHelper == 1)
                 {
+                    Debug.Log(selectedLevelNumber);
                     if (selectedLevelNumber == LevelNumber)
                     {
 
                         PlayerPrefs.SetInt("LevelNumber", 32);
 
                     }
+                    PlayerPrefs.SetInt("levelSelected", 32);
                     adHelper++;
 
-                    PlayerPrefs.SetInt("levelSelected", 32);
 
                         Level1.SetActive(false);
                         Level2.SetActive(true);

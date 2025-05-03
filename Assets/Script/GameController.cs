@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TapsellSDK;
 using DG.Tweening;
+//using UnityEngine.UIElements;
 
 
 public class GameController : MonoBehaviour
@@ -17,16 +18,16 @@ public class GameController : MonoBehaviour
     private int selectedLevelNumber;
     int tapsellHelper;  // for avalabing ad
 
-    public Sprite soundOn;
-    public Sprite soundOff;
-    public Button sound;
 
+    public GameObject BackGround;
     public AudioSource PauseAudioSource;
     public AudioSource ResumeAudioSource;
 
 
     public Animator Panel_Animator;
 
+
+    public AudioSource BackGroundMusic;
 
     public AudioSource PlupSound;
 
@@ -46,7 +47,7 @@ public class GameController : MonoBehaviour
     public GameObject Level13;
     public GameObject Level14;
     public GameObject Level15;
-    public Text starNumber;
+    //public Text starNumber;
 
     public static int adHelper;
 
@@ -133,7 +134,7 @@ public class GameController : MonoBehaviour
         // خواندن مقدار ذخیره‌شده (اگر وجود نداشته باشد، مقدار پیش‌فرض 1 است)
         int soundSetting = PlayerPrefs.GetInt("sound", 1);
         // اعمال وضعیت ذخیره‌شده
-        AudioListener.volume = soundSetting == 1 ? 1 : 0;
+        BackGroundMusic.volume = soundSetting == 1 ? 1 : 0;
         // تنظیم موقعیت دکمه سوییچ بر اساس مقدار ذخیره‌شده
         SwitchButton.transform.localPosition = new Vector3(soundSetting == 1 ? 90 : -90, SwitchButton.transform.localPosition.y, 0);
 
@@ -149,19 +150,21 @@ public class GameController : MonoBehaviour
         //starAnim.enabled = true;
         if (PlayerPrefs.GetInt("sound", 1) == 1) // 1 mean on, 0 mean off
         {
-            AudioListener.volume = 1;
+            BackGroundMusic.volume = 1;
+            BackGround.GetComponent<RawImage>().color = Color.green;
             //sound.GetComponent<Image>().sprite = soundOn;
 
         }
         if (PlayerPrefs.GetInt("sound", 1) == 0) // 1 mean on, 0 mean off
         {
-            AudioListener.volume = 0;
+            BackGroundMusic.volume = 0;
+            BackGround.GetComponent<RawImage>().color = Color.red;
             //sound.GetComponent<Image>().sprite = soundOff;
 
 
         }
 
-        starNumber.text = PlayerPrefs.GetInt("Star", 0).ToString();
+        //starNumber.text = PlayerPrefs.GetInt("Star", 0).ToString();
         part1.locked1 = true;
         part2.locked2 = true;
         part3.locked3 = true;
@@ -476,25 +479,6 @@ public class GameController : MonoBehaviour
         //fireWorks.enableEmission = false;
 
     }
-    public void soundOnOff()
-    {
-        if (PlayerPrefs.GetInt("sound", 1) == 1) // 1 mean on, 0 mean off
-        {
-            PlayerPrefs.SetInt("sound", 0);
-            AudioListener.volume = 0f;
-            sound.GetComponent<Image>().sprite = soundOff;
-            return;
-
-        }
-        if (PlayerPrefs.GetInt("sound", 1) == 0) // 1 mean on, 0 mean off
-        {
-            PlayerPrefs.SetInt("sound", 1);
-            AudioListener.volume = 1f;
-            sound.GetComponent<Image>().sprite = soundOn;
-            return;
-
-        }
-    }
     public void SwitchSoundButtonClick()
     {
         //SwitchButton.transform.localPosition = new Vector3(-SwitchButton.transform.localPosition.x,SwitchButton.transform.localPosition.y,0);
@@ -503,13 +487,16 @@ public class GameController : MonoBehaviour
         Debug.Log(" switch status = " + SwitchStatus);
         if (SwitchStatus == 1)
         {
-            AudioListener.volume = 1;
+            BackGroundMusic.volume = 1;
             PlayerPrefs.SetInt("sound", 1);
+            BackGround.GetComponent<RawImage>().color = Color.green;
         }
         else if (SwitchStatus == -1)
         {
-            AudioListener.volume = 0;
+            BackGroundMusic.volume = 0;
             PlayerPrefs.SetInt("sound", 0);
+            BackGround.GetComponent<RawImage>().color = Color.red;
+
         }
         PlayerPrefs.Save();
     }

@@ -93,7 +93,7 @@ public class winLevel5part : MonoBehaviour
                 fire1.SetActive(true);
 
                 starHelper = 0;
-                starAnim.gameObject.GetComponent<Animator>().enabled = true;
+                //starAnim.gameObject.GetComponent<Animator>().enabled = true;
                 //starAnim.gameObject.SetActive(true);
                 StartCoroutine(star());
                 StartCoroutine(starSet());

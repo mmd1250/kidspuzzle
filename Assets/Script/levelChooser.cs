@@ -2135,7 +2135,7 @@ public class levelChooser : MonoBehaviour
     public void GiveLevels()
     {
         //PlayerPrefs.DeleteKey("levelnumber");
-        PlayerPrefs.SetInt("LevelNumber", 29);
+        PlayerPrefs.SetInt("LevelNumber", 31);
         //LevelNumber = 1;
     }
 }

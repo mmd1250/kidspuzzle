@@ -37,7 +37,7 @@ public class GameController4tike : MonoBehaviour
     public Sprite soundOff;
     public Button sound;
 
-    public Text starNumber;
+    //public Text starNumber;
 
     public Animator Panel_Animator;
     public static AudioClip lockPart;
@@ -132,18 +132,18 @@ public class GameController4tike : MonoBehaviour
         request();
         if (PlayerPrefs.GetInt("sound", 1) == 1) // 1 mean on, 0 mean off
         {
-            AudioListener.volume = 1;
+            //AudioListener.volume = 1;
             //sound.GetComponent<Image>().sprite = soundOn;
 
         }
         if (PlayerPrefs.GetInt("sound", 1) == 0) // 1 mean on, 0 mean off
         {
-            AudioListener.volume = 0;
+            //AudioListener.volume = 0;
             //sound.GetComponent<Image>().sprite = soundOff;
 
 
         }
-        starNumber.text = PlayerPrefs.GetInt("Star", 0).ToString();
+        //starNumber.text = PlayerPrefs.GetInt("Star", 0).ToString();
 
         part1.locked1 = true;
         part2.locked2 = true;

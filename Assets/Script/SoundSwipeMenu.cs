@@ -11,19 +11,26 @@ public class SoundSwipeMenu : MonoBehaviour
     public int MoveX;
     public GameObject switchButton;
     public GameObject BackGround;
+
+    public AudioSource BackGroundMusic;
     // Start is called before the first frame update
     void Start()
     {
         int soundSetting = PlayerPrefs.GetInt("sound", 1);
-        AudioListener.volume = soundSetting == 1 ? 1 : 0;
+        BackGroundMusic.volume = soundSetting == 1 ? 1 : 0;
         switchButton.transform.localPosition = new Vector3(soundSetting == 1 ? MoveX : -MoveX, switchButton.transform.localPosition.y, 0);
         SwitchStatus = soundSetting == 1 ? 1 : -1;
-        if (SwitchStatus == -1)
+        if (PlayerPrefs.GetInt("sound", 1) == 1)
         {
-            BackGround.GetComponent<RawImage>().color = Color.red;
+            BackGroundMusic.volume = 1;
+            //PlayerPrefs.SetInt("sound", 0);
+            BackGround.GetComponent<RawImage>().color = Color.green;
         }
-        if (SwitchStatus == 1)
-        { BackGround.GetComponent<RawImage>().color = Color.green;
+        if (PlayerPrefs.GetInt("sound", 1) == 0)
+        { 
+            BackGround.GetComponent<RawImage>().color = Color.red;
+            //PlayerPrefs.SetInt("sound", 1);
+            BackGroundMusic.volume = 0;
         }
 
     }
@@ -41,15 +48,17 @@ public class SoundSwipeMenu : MonoBehaviour
         Debug.Log("switch status : " + SwitchStatus);
         if (SwitchStatus == 1)
         {
-            BackGround.GetComponent<RawImage>().color = Color.green;
-            AudioListener.volume = 1;
+            BackGroundMusic.volume = 1;
             PlayerPrefs.SetInt("sound", 1);
+            BackGround.GetComponent<RawImage>().color = Color.green;            
         }
         else if (SwitchStatus == -1)
         {
-            BackGround.GetComponent<RawImage>().color = Color.red;
-            AudioListener.volume = 0;
+            BackGroundMusic.volume = 0;
             PlayerPrefs.SetInt("sound", 0);
+            BackGround.GetComponent<RawImage>().color = Color.red;
+            
+           
         }
         PlayerPrefs.Save();
     }
