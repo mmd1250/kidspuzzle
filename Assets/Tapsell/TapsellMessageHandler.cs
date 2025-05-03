@@ -2,9 +2,10 @@
 using TapsellSDK;
 using UnityEngine;
 
-public class TapsellMessageHandler : MonoBehaviour {
+public class TapsellMessageHandler : MonoBehaviour
+{
 
-	public void NotifyAdAvailable (String body) {
+	/*public void NotifyAdAvailable (String body) {
 		TapsellAd result = new TapsellAd ();
 		result = JsonUtility.FromJson<TapsellAd> (body);
 		Debug.Log ("notifyAdAvailable:" + result.zoneId + ":" + result.adId);
@@ -72,5 +73,7 @@ public class TapsellMessageHandler : MonoBehaviour {
 		Debug.Log ("notifyShowFinished:" + result.zoneId + ":" + result.adId + ":" + result.rewarded);
 		Tapsell.OnAdShowFinished (result);
 	}
+
+}*/
 
 }

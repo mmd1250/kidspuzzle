@@ -70,64 +70,8 @@ public class GameController : MonoBehaviour
     public GameObject SwitchButton;
     //public ParticleSystem fireWorks;
 
-    public void request()
-    {
-        Tapsell.RequestAd(zoneId, false,
-             (TapsellAd result) => {
-                 // onAdAvailable
-                 Debug.Log("on Ad Available");
-                 ad = result;
-                 tapsellHelper = 1;
-             },
-
-             (string zoneId) => {
-                 // onNoAdAvailable
-                 Debug.Log("no Ad Available");
-                 tapsellHelper = 0;
-
-             },
-
-             (TapsellError error) => {
-                 // onError
-                 Debug.Log(error.message);
-                 tapsellHelper = 0;
-
-             },
-
-             (string zoneId) => {
-                 // onNoNetwork
-                 Debug.Log("no Network");
-                 tapsellHelper = 0;
-
-             },
-
-             (TapsellAd result) => {
-                 // onExpiring
-                 Debug.Log("expiring");
-             },
-
-             (TapsellAd result) => {
-                 // onOpen
-                 Debug.Log("open");
-             },
-
-             (TapsellAd result) => {
-                 // onClose
-                 Debug.Log("close");
-             }
-
-           );
-    }
-    public void showads()
-    {
-        showOptions.backDisabled = false;
-        showOptions.immersiveMode = false;
-        showOptions.rotationMode = TapsellShowOptions.ROTATION_UNLOCKED;
-        showOptions.showDialog = true;
-        //showOptions.setRotationMode(ROTATION_MODE);
-
-        Tapsell.ShowAd(ad, zoneId);
-    }
+    
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -146,7 +90,7 @@ public class GameController : MonoBehaviour
         pauseHelper = 0;
         adHelper = 0;
         // starAnim.gameObject.SetActive(true);
-        request();
+        //request();
         //starAnim.enabled = true;
         if (PlayerPrefs.GetInt("sound", 1) == 1) // 1 mean on, 0 mean off
         {
@@ -505,7 +449,7 @@ public class GameController : MonoBehaviour
     {
 
         yield return new WaitForSeconds(15f);
-        request();
+        //request();
 
     }
     IEnumerator initAds()
@@ -528,7 +472,7 @@ public class GameController : MonoBehaviour
 
         if (adHelper >= 5 && PlayerPrefs.GetInt("ads", 1) == 1 && tapsellHelper ==1)
         {
-            showads();
+            //showads();
             adHelper = 0;
             StartCoroutine(reqad());
 
