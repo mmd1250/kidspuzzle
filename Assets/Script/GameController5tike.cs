@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-using TapsellSDK;
+//using TapsellSDK;
+using TapsellPlusSDK;
+using TapsellPlusSDK.models;
 
 
 public class GameController5tike : MonoBehaviour
@@ -20,6 +22,8 @@ public class GameController5tike : MonoBehaviour
     public GameObject Level4;
     public GameObject Level5;
 
+
+    public string _responseId;
 
     public Animator Panel_Animator;
 
@@ -43,7 +47,7 @@ public class GameController5tike : MonoBehaviour
     public GameObject pausePanel;
     string zoneId = "606ae81114e5b90001c817c0";
     public static TapsellAd ad;
-    TapsellShowOptions showOptions = new TapsellShowOptions();
+    //TapsellShowOptions showOptions = new TapsellShowOptions();
 
 
 
@@ -61,10 +65,12 @@ public class GameController5tike : MonoBehaviour
 
         pauseHelper = 0;
         adHelper = 0;
-        //request();
+        Request();
 
         //starNumber.text = PlayerPrefs.GetInt("Star", 0).ToString();
-
+        TapsellPlus.Initialize("drbgshgqikhmaokrmllobmkbmnopqseqfjoijkterbjtjrljgfnriqfpadqmgfcsedprec",
+        adNetworkName => Debug.Log(adNetworkName + " Initialized Successfully."),
+        error => Debug.Log(error.ToString()));
         if (PlayerPrefs.GetInt("sound", 1) == 1) // 1 mean on, 0 mean off
         {
             //AudioListener.volume = 1;
@@ -146,25 +152,38 @@ public class GameController5tike : MonoBehaviour
         }
 
       }
-    public void soundOnOff()
+
+    public void Request()
     {
-        if (PlayerPrefs.GetInt("sound", 1) == 1) // 1 mean on, 0 mean off
-        {
-            PlayerPrefs.SetInt("sound", 0);
-            AudioListener.volume = 0f;
-            sound.GetComponent<Image>().sprite = soundOff;
-            return;
+        TapsellPlus.RequestRewardedVideoAd("68171b0de18d5645456c14c0",
 
-        }
-        if (PlayerPrefs.GetInt("sound", 1) == 0) // 1 mean on, 0 mean off
-        {
-            PlayerPrefs.SetInt("sound", 1);
-            AudioListener.volume = 1f;
-            sound.GetComponent<Image>().sprite = soundOn;
+                  tapsellPlusAdModel => {
+                      Debug.Log("on response " + tapsellPlusAdModel.responseId);
+                      _responseId = tapsellPlusAdModel.responseId;
+                  },
+                  error => {
+                      Debug.Log("Error " + error.message);
+                  }
+              );
+    }
+    public void Show()
+    {
+        TapsellPlus.ShowRewardedVideoAd(_responseId,
 
-            return;
-
-        }
+                  tapsellPlusAdModel => {
+                      Debug.Log("onOpenAd " + tapsellPlusAdModel.zoneId);
+                  },
+                  tapsellPlusAdModel => {
+                      Debug.Log("onReward " + tapsellPlusAdModel.zoneId);
+                  },
+                  tapsellPlusAdModel => {
+                      Debug.Log("onCloseAd " + tapsellPlusAdModel.zoneId);
+                      adHelper = 0;
+                  },
+                  error => {
+                      Debug.Log("onError " + error.errorMessage);
+                  }
+              );
     }
     IEnumerator reqad()
     {
@@ -177,7 +196,7 @@ public class GameController5tike : MonoBehaviour
     {
 
         yield return new WaitForSeconds(60f);
-        Tapsell.Initialize(tapsellKey);
+        //Tapsell.Initialize(tapsellKey);
         initialAdHelper = 1;
 
 
@@ -191,11 +210,11 @@ public class GameController5tike : MonoBehaviour
             initialAdHelper = 0;
         }
 
-        if (adHelper >= 4 && PlayerPrefs.GetInt("ads", 1) == 1 && tapsellHelper == 1)
+        if (adHelper >= 4)
         {
-            //showads();
+            Show();
             adHelper = 0;
-            StartCoroutine(reqad());
+            //StartCoroutine(reqad());
 
         }
         if (pauseHelper == 1)
