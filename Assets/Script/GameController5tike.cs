@@ -155,7 +155,7 @@ public class GameController5tike : MonoBehaviour
 
     public void Request()
     {
-        TapsellPlus.RequestRewardedVideoAd("68171b0de18d5645456c14c0",
+        TapsellPlus.RequestInterstitialAd("68171b0de18d5645456c14c0",
 
                   tapsellPlusAdModel => {
                       Debug.Log("on response " + tapsellPlusAdModel.responseId);
@@ -168,13 +168,10 @@ public class GameController5tike : MonoBehaviour
     }
     public void Show()
     {
-        TapsellPlus.ShowRewardedVideoAd(_responseId,
+        TapsellPlus.ShowInterstitialAd(_responseId,
 
                   tapsellPlusAdModel => {
                       Debug.Log("onOpenAd " + tapsellPlusAdModel.zoneId);
-                  },
-                  tapsellPlusAdModel => {
-                      Debug.Log("onReward " + tapsellPlusAdModel.zoneId);
                   },
                   tapsellPlusAdModel => {
                       Debug.Log("onCloseAd " + tapsellPlusAdModel.zoneId);

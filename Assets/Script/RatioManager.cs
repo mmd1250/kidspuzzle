@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class RatioManager : MonoBehaviour
 {
@@ -8,12 +9,13 @@ public class RatioManager : MonoBehaviour
     float aspectRatio = (float)Screen.width / Screen.height;
     float targetAspect = 16f / 9f;
     float baseSize = 5f; // ???? ????????? ???????????
+    public CanvasScaler canvasScaler;  // یا می‌تونی با GetComponent بگیری
 
     // Start is called before the first frame update
-    void Start()
-    {
-        AdjustCameraSize();
-    }
+    //void Start()
+
+    //AdjustCameraSize();
+
 
     // Update is called once per frame
     void Update()
@@ -21,28 +23,31 @@ public class RatioManager : MonoBehaviour
         
     }
 
-    void AdjustCameraSize()
+    IEnumerator Start()
     {
-        float targetAspect = 9f / 16f; // نسبت تصویر مرجع (مثلاً 9:16 برای گوشی پرترایت)
-        float windowAspect = (float)Screen.width / (float)Screen.height;
-        float scaleHeight = windowAspect / targetAspect;
+        yield return new WaitForSeconds(0.1f);
 
-        Camera cam = Camera.main;
+        int w = Screen.width;
+        int h = Screen.height;
+        float aspectRatio = (float)w / h;
+        Debug.Log("Actual resolution: " + w + "x" + h);
+        Debug.Log("Aspect Ratio: " + aspectRatio);
 
-        if (scaleHeight < 1.0f)
-        {
-            // صفحه باریک‌تر از حالت مرجع است - پس ارتفاع زیاد می‌کنیم
-            cam.orthographicSize = cam.orthographicSize / scaleHeight;
-        }
-        float currentAspect = (float)Screen.width / (float)Screen.height;
-        float scaleFactor = targetAspect / currentAspect;
 
-        if (scaleFactor > 1f)
-        {
-            // یعنی صفحه بلندتر از حالت مرجع شده (مثل 4:3)
-            cam.orthographicSize *= scaleFactor;
-        }
 
+        // اگه دستی از Inspector ندی، اینجا بگیرش
+        if (canvasScaler == null)
+            canvasScaler = GetComponent<CanvasScaler>();
+
+        // تغییر حالت به Scale With Screen Size
+        //canvasScaler.uiScaleMode = CanvasScaler.ScaleMode.ScaleWithScreenSize;
+
+        // تنظیم رزولوشن مرجع
+        canvasScaler.referenceResolution = new Vector2(h, w);
+
+        // انتخاب اینکه با عرض یا ارتفاع مقایسه کنه (0 = عرض، 1 = ارتفاع)
+        canvasScaler.screenMatchMode = CanvasScaler.ScreenMatchMode.MatchWidthOrHeight;
+        canvasScaler.matchWidthOrHeight = 0f; // 0 برای فقط عرض، 1 برای فقط ارتفاع، 0.5 برای ترکیب
     }
 
 }
