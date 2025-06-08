@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TapsellSDK;
 using DG.Tweening;
+using TapsellPlusSDK;
 //using UnityEngine.UIElements;
 
 
@@ -13,16 +14,19 @@ public class GameController : MonoBehaviour
 {
     string tapsellKey = "rahqjisrhsmpfapomoqsrfjefaoqcparseaqqscfndfgskootkcdjmsjbicibbsaaapacs";
 
-    int initialAdHelper; 
+    int initialAdHelper;
     private int LevelNumber;
     private int selectedLevelNumber;
     int tapsellHelper;  // for avalabing ad
 
 
+    public string _responseId;
+
     public GameObject BackGround;
     public AudioSource PauseAudioSource;
     public AudioSource ResumeAudioSource;
 
+    public bool CanshowAd = true;
 
     public Animator Panel_Animator;
 
@@ -60,7 +64,7 @@ public class GameController : MonoBehaviour
 
     public Button pause;
 
-    public GameObject pausePanel; 
+    public GameObject pausePanel;
 
 
     public static int TouchHelper;
@@ -70,11 +74,25 @@ public class GameController : MonoBehaviour
     public GameObject SwitchButton;
     //public ParticleSystem fireWorks;
 
-    
-    
+
+
     // Start is called before the first frame update
     void Start()
     {
+
+
+        if (PlayerPrefs.GetInt("CanShowAd", 1) == 0)
+        {
+            CanshowAd = false;
+        }
+        else if (PlayerPrefs.GetInt("CanShowAd", 1) == 1)
+        {
+            CanshowAd = true;
+        }
+
+        TapsellPlus.Initialize("ihmigsicflbjhrfmcbfinfhnoridjrteklohonlfpqmhpmleajigscijcqmpgoikomsano",
+adNetworkName => Debug.Log(adNetworkName + " Initialized Successfully."),
+error => Debug.Log(error.ToString()));
         // خواندن مقدار ذخیره‌شده (اگر وجود نداشته باشد، مقدار پیش‌فرض 1 است)
         int soundSetting = PlayerPrefs.GetInt("sound", 1);
         // اعمال وضعیت ذخیره‌شده
@@ -444,13 +462,47 @@ public class GameController : MonoBehaviour
         }
         PlayerPrefs.Save();
     }
-
+    private void RequestAd()
+    {
+        TapsellPlus.RequestInterstitialAd("681694588accde53baff035c",
+   TapsellPlusAdModel =>
+   {
+       Debug.Log("on response" + TapsellPlusAdModel.responseId);
+       _responseId = TapsellPlusAdModel.responseId;
+   },
+   error =>
+   {
+       Debug.Log("Error" + error.message);
+   }
+    );
+    }
     IEnumerator reqad()
     {
 
         yield return new WaitForSeconds(15f);
-        //request();
+        RequestAd();
 
+    }
+    public void ShowAd()
+    {
+        TapsellPlus.ShowRewardedVideoAd(_responseId,
+            TapsellPlusAdModel =>
+            {
+                Debug.Log("OnOpenAd" + TapsellPlusAdModel.zoneId);
+            },
+            TapsellPlusAdModel =>
+            {
+                Debug.Log("onRewarded" + TapsellPlusAdModel.zoneId);
+            },
+            TapsellPlusAdModel =>
+            {
+                Debug.Log("onClosed" + TapsellPlusAdModel.zoneId);
+            },
+            error =>
+            {
+                Debug.Log("OnError" + error.errorMessage);
+            }
+            );
     }
     IEnumerator initAds()
     {
@@ -470,11 +522,13 @@ public class GameController : MonoBehaviour
             initialAdHelper = 0;
         }
 
-        if (adHelper >= 5 && PlayerPrefs.GetInt("ads", 1) == 1 && tapsellHelper ==1)
+        if (adHelper >= 2 && CanshowAd)
         {
-            //showads();
+            Debug.Log("2 ta lvl passed");
+            ShowAd();
             adHelper = 0;
             StartCoroutine(reqad());
+            
 
         }
         if(pauseHelper ==1)
@@ -524,7 +578,7 @@ public class GameController : MonoBehaviour
                     part3.locked3 = false;
                     LoadGame();
                     winLevel.winHelper = 0;
-                    winLevel.starHelper = 1;
+                    
                 }
                 break;
             case 2:

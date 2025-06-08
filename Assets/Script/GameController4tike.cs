@@ -4,11 +4,13 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-using TapsellSDK;
-
+//using TapsellSDK;
+using TapsellPlusSDK;
+using UnityEditor.PackageManager.Requests;
 
 public class GameController4tike : MonoBehaviour
 {
+        
     private int LevelNumber;
     private int selectedLevelNumber;
     string tapsellKey = "rahqjisrhsmpfapomoqsrfjefaoqcparseaqqscfndfgskootkcdjmsjbicibbsaaapacs";
@@ -16,6 +18,10 @@ public class GameController4tike : MonoBehaviour
     int initialAdHelper;
     int tapsellHelper;  // for avalabing ad
 
+    public string _responseId;
+
+
+    public bool CanshowAd = true;
 
     public GameObject Level1;
     public GameObject Level2;
@@ -44,7 +50,7 @@ public class GameController4tike : MonoBehaviour
     public static int adHelper;
     string zoneId = "606ae81114e5b90001c817c0";
     public static TapsellAd ad;
-    TapsellShowOptions showOptions = new TapsellShowOptions();
+    //TapsellShowOptions showOptions = new TapsellShowOptions();
     public static int pauseHelper; // for disabaling pause during win animation
 
 
@@ -62,17 +68,72 @@ public class GameController4tike : MonoBehaviour
 
     public static int TouchHelper;
     // public ParticleSystem fireWorks;
-   
-    
+
+
     // Start is called before the first frame update
+    private void RequestAd()
+    {
+        TapsellPlus.RequestInterstitialAd("681694588accde53baff035c",
+   TapsellPlusAdModel =>
+   {
+       Debug.Log("on response" + TapsellPlusAdModel.responseId);
+       _responseId = TapsellPlusAdModel.responseId;
+   },
+   error =>
+   {
+       Debug.Log("Error" + error.message);
+   }
+    );
+    }
+    IEnumerator reqad()
+    {
+
+        yield return new WaitForSeconds(15f);
+        RequestAd();
+
+    }
+    public void ShowAd()
+    {
+        TapsellPlus.ShowRewardedVideoAd(_responseId,
+            TapsellPlusAdModel =>
+            {
+                Debug.Log("OnOpenAd" + TapsellPlusAdModel.zoneId);
+            },
+            TapsellPlusAdModel =>
+            {
+                Debug.Log("onRewarded" + TapsellPlusAdModel.zoneId);
+            },
+            TapsellPlusAdModel =>
+            {
+                Debug.Log("onClosed" + TapsellPlusAdModel.zoneId);
+            },
+            error =>
+            {
+                Debug.Log("OnError" + error.errorMessage);
+            }
+            );
+    }
     void Start()
     {
+
+        if (PlayerPrefs.GetInt("CanShowAd", 1) == 0)
+        {
+            CanshowAd = false;
+        }
+        else if (PlayerPrefs.GetInt("CanShowAd", 1) == 1)
+        {
+            CanshowAd = true;
+        }
+
+        TapsellPlus.Initialize("ihmigsicflbjhrfmcbfinfhnoridjrteklohonlfpqmhpmleajigscijcqmpgoikomsano",
+        adNetworkName => Debug.Log(adNetworkName + " Initialized Successfully."),
+        error => Debug.Log(error.ToString()));
         initialAdHelper = 1;
 
         pauseHelper = 0;
         adHelper = 0;
         // starAnim.gameObject.SetActive(true);
-        //request();
+        RequestAd();
         if (PlayerPrefs.GetInt("sound", 1) == 1) // 1 mean on, 0 mean off
         {
             //AudioListener.volume = 1;
@@ -409,7 +470,7 @@ public class GameController4tike : MonoBehaviour
         {
             PlayerPrefs.SetInt("sound", 0);
             AudioListener.volume = 0f;
-            sound.GetComponent<Image>().sprite = soundOff;
+            //sound.GetComponent<Image>().sprite = soundOff;
             return;
 
         }
@@ -417,24 +478,17 @@ public class GameController4tike : MonoBehaviour
         {
             PlayerPrefs.SetInt("sound", 1);
             AudioListener.volume = 1f;
-            sound.GetComponent<Image>().sprite = soundOn;
+            //sound.GetComponent<Image>().sprite = soundOn;
 
             return;
 
         }
     }
-    IEnumerator reqad()
-    {
-
-        yield return new WaitForSeconds(15f);
-        //request();
-
-    }
     IEnumerator initAds()
     {
 
         yield return new WaitForSeconds(60f);
-        Tapsell.Initialize(tapsellKey);
+        //Tapsell.Initialize(tapsellKey);
         initialAdHelper = 1;
 
 
@@ -448,11 +502,12 @@ public class GameController4tike : MonoBehaviour
             initialAdHelper = 0;
         }
 
-        if (adHelper >= 5 && PlayerPrefs.GetInt("ads", 1) == 1 && tapsellHelper == 1)
+        if (adHelper >= 2 && CanshowAd)
         {
-            //showads();
+            ShowAd();
             adHelper = 0;
             StartCoroutine(reqad());
+            Debug.Log("4 ta lvl gozashte shod !!");
 
         }
         if (pauseHelper == 1)

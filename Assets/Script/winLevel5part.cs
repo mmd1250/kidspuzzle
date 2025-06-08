@@ -95,8 +95,7 @@ public class winLevel5part : MonoBehaviour
                 starHelper = 0;
                 //starAnim.gameObject.GetComponent<Animator>().enabled = true;
                 //starAnim.gameObject.SetActive(true);
-                StartCoroutine(star());
-                StartCoroutine(starSet());
+                
                 StartCoroutine(fire2C());
                 StartCoroutine(fire3C());
                 PlayerPrefs.SetInt("Star", PlayerPrefs.GetInt("Star", 0) + 5);
@@ -136,20 +135,6 @@ public class winLevel5part : MonoBehaviour
         yield return new WaitForSeconds(4f);
         winHelper = 1;
     }
-    IEnumerator star()
-    {
 
-        yield return new WaitForSeconds(3.3f);
-        starAnim.gameObject.GetComponent<Animator>().enabled = false;
-
-        //starAnim.gameObject.SetActive(false);
-
-    }
-    IEnumerator starSet()
-    {
-
-        yield return new WaitForSeconds(0.85f);
-        starNumber.text = PlayerPrefs.GetInt("Star", 0).ToString();
-
-    }
+ 
 }

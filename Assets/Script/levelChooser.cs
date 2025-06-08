@@ -2130,6 +2130,42 @@ public class levelChooser : MonoBehaviour
     {
         //PlayerPrefs.DeleteKey("levelnumber");
         PlayerPrefs.SetInt("LevelNumber", 1);
+        lvl1.interactable = true;
+        lvl2.interactable = false;
+        lvl3.interactable = false;
+        lvl4.interactable = false;
+        lvl5.interactable = false;
+        lvl6.interactable = false;
+        lvl7.interactable = false;
+        lvl8.interactable = false;
+        lvl9.interactable = false;
+        lvl10.interactable = false;
+        lvl11.interactable = false;
+        lvl12.interactable = false;
+        lvl13.interactable = false;
+        lvl14.interactable = false;
+        lvl15.interactable = false;
+        lvl16.interactable = false;
+        lvl17.interactable = false;
+        lvl18.interactable = false;
+        lvl19.interactable = false;
+        lvl20.interactable = false;
+        lvl21.interactable = false;
+        lvl22.interactable = false;
+        lvl23.interactable = false;
+        lvl24.interactable = false;
+        lvl25.interactable = false;
+        lvl26.interactable = false;
+        lvl27.interactable = false;
+        lvl28.interactable = false;
+        lvl29.interactable = false;
+        lvl30.interactable = false;
+        lvl31.interactable = false;
+        lvl32.interactable = false;
+        lvl33.interactable = false;
+        lvl34.interactable = false;
+        lvl35.interactable = false;
+
         //LevelNumber = 1;
     }
     public void GiveLevels()

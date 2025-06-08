@@ -6950,7 +6950,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &336385623
 Transform:
   m_ObjectHideFlags: 0
@@ -16299,16 +16299,16 @@ GameObject:
   - component: {fileID: 697565078}
   - component: {fileID: 697565079}
   - component: {fileID: 697565080}
-  - component: {fileID: 697565082}
   - component: {fileID: 697565081}
   - component: {fileID: 697565083}
+  - component: {fileID: 697565084}
   m_Layer: 0
   m_Name: LVL2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &697565078
 Transform:
   m_ObjectHideFlags: 0
@@ -16472,27 +16472,6 @@ MonoBehaviour:
   part3: {fileID: 377003607}
   part4: {fileID: 0}
   part5: {fileID: 0}
---- !u!114 &697565082
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 697565077}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b57ae3a6007160546971023d1a7554ef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  part1Shadow: {fileID: 468456056}
-  part2Shadow: {fileID: 776745790}
-  part3Shadow: {fileID: 87663971}
-  part1: {fileID: 1548963778}
-  part2: {fileID: 999635296}
-  part3: {fileID: 1824510663}
-  MainPart1: {fileID: 1432026455}
-  MainPart2: {fileID: 192995402}
-  MainPart3: {fileID: 377003607}
 --- !u!114 &697565083
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16517,6 +16496,27 @@ MonoBehaviour:
   - {fileID: 87663971}
   PausePanel1: {fileID: 1549575718}
   flag: 0
+--- !u!114 &697565084
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 697565077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b57ae3a6007160546971023d1a7554ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  part1Shadow: {fileID: 468456056}
+  part2Shadow: {fileID: 776745790}
+  part3Shadow: {fileID: 87663971}
+  part1: {fileID: 1548963778}
+  part2: {fileID: 999635296}
+  part3: {fileID: 1824510663}
+  MainPart1: {fileID: 1432026455}
+  MainPart2: {fileID: 192995402}
+  MainPart3: {fileID: 377003607}
 --- !u!1 &706681302
 GameObject:
   m_ObjectHideFlags: 0
@@ -20417,9 +20417,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a079f4372eda9848a976bfe1078d078, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _responseId: 
   BackGround: {fileID: 717224756}
   PauseAudioSource: {fileID: 1455744601}
   ResumeAudioSource: {fileID: 1733817755}
+  CanshowAd: 1
   Panel_Animator: {fileID: 1549575722}
   BackGroundMusic: {fileID: 806936601}
   PlupSound: {fileID: 0}
@@ -30441,8 +30443,8 @@ GameObject:
   - component: {fileID: 1432026459}
   - component: {fileID: 1432026457}
   - component: {fileID: 1432026458}
-  - component: {fileID: 1432026460}
   - component: {fileID: 1432026461}
+  - component: {fileID: 1432026462}
   m_Layer: 0
   m_Name: Part1
   m_TagString: Untagged
@@ -30580,27 +30582,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &1432026460
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1432026455}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: f64268daf0d28a04bb152ab2b9babb28, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!82 &1432026461
 AudioSource:
   m_ObjectHideFlags: 0
@@ -30697,6 +30678,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!95 &1432026462
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1432026455}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f64268daf0d28a04bb152ab2b9babb28, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!4 &1432920615 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 412550, guid: c574b8bf6409ae8478316b2134abf9d1,

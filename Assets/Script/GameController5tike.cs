@@ -23,6 +23,8 @@ public class GameController5tike : MonoBehaviour
     public GameObject Level5;
 
 
+    public bool CanshowAd = true;
+
     public string _responseId;
 
     public Animator Panel_Animator;
@@ -61,6 +63,19 @@ public class GameController5tike : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
+
+
+        if (PlayerPrefs.GetInt("CanShowAd", 1) == 0)
+        {
+            CanshowAd = false;
+        }
+        else if (PlayerPrefs.GetInt("CanShowAd", 1) == 1)
+        {
+            CanshowAd = true;
+        }
+
+
         initialAdHelper = 1;
 
         pauseHelper = 0;
@@ -207,7 +222,7 @@ public class GameController5tike : MonoBehaviour
             initialAdHelper = 0;
         }
 
-        if (adHelper >= 4)
+        if (adHelper >= 2 && CanshowAd)
         {
             Show();
             adHelper = 0;

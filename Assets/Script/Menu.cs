@@ -116,7 +116,10 @@ public class Menu : MonoBehaviour
 
 
     }*/
-
+    public void noadShow()
+    {
+        PlayerPrefs.SetInt("CanShowAd",0);
+    }
     public void levelSelected3tikeUI()
     {
         level = 1;
